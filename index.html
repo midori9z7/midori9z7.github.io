@@ -8,18 +8,19 @@
         body {
             background: #0a0a0a;
             color: #e0e0e0;
-            margin: 40px 0 40px 24px;
-            padding: 0;
-            max-width: 42em;
+            margin: 40px 0px 24px 0px;
+            padding: 0 24px;
+            max-width: 40em;
         }
         a { color: #002fff; }
         h1 { margin: 0; padding: 0.3em 0 0 0; }
-        h2 { margin: 1.5em 0 0.3em 0; }
+        h2 { margin: 0em 0 0.3em 0; }
 
         img.profile {
-            width: 10em;
-            float: left;
-            padding: 1em;
+          width: 10em;
+        float: left;
+        padding: 0;               /* 去掉图片内边距 */
+        margin-right: 1.5em;      /* 图片右侧留空，与文字隔开 */
         }
         .dark { display: none; }
 
@@ -85,7 +86,7 @@
     <hr>
     <p><small>
         Code <a href="https://wtfpl.net/">WTFPL v2</a> ·
-        Posts <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>
+        Posts <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>
     </small></p>
 </footer>
 </body>
