@@ -1,45 +1,85 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>my_blog</title>
+    <title>Midori's Blog</title>
     <style>
         body {
-            background: #000;
-            color: #eee;
-            max-width: 600px;
-            margin: 40px auto;
-            padding: 0 20px;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            margin: 40px 0 40px 24px;
+            padding: 0;
+            max-width: 42em;
         }
-        a { color: #5ea6ff; }
-        h1, h2, h3 { color: #fff; }
+        a { color: #002fff; }
+        h1 { margin: 0; padding: 0.3em 0 0 0; }
+        h2 { margin: 1.5em 0 0.3em 0; }
+
+        img.profile {
+            width: 10em;
+            float: left;
+            padding: 1em;
+        }
+        .dark { display: none; }
+
+        @media (prefers-color-scheme: dark) {
+            body { background: #0a0a0a; color: #e0e0e0; }
+            .dark { display: block; }
+            .light { display: none; }
+        }
+        @media (prefers-color-scheme: light) {
+            body { background: #fafafa; color: #1a1a1a; }
+        }
+
+        ul { list-style: none; margin: 0; padding: 0; }
+        li { margin: 0.3em 0; }
+
+        .jam { clear: both; margin: 1.5em 0; }
+        .thumbnail { float: left; margin: 0 1em 1em 0; }
+        .thumbnail img { width: 200px; }
     </style>
 </head>
 <body>
-<h1>midori9z7's Blog</h1>
-<p>此博客作墓碑用</p>
+    <img class="profile light" alt="bright photo" src="img/shiina 2.jpg">
+    <img class="profile dark" alt="dark photo" src="img/Shiina 1.jpg">
 
-<h2>Poems</h2>
-<p>Some naive thoughts</p>
-<ul>
- <h3>2025</h3>
-    <li><a href="posts/poems/2025/涸辙之鲋与病变移植.html">涸辙之鲋与病变移植</a></li>
- <h3>2026</h3>
-    <li><a href="posts/poems/2026/陈思王梦水.html">陈思王梦水</a></li>
-    <li><a href="posts/poems/2026/幻灵，第6号.html">幻灵，第6号</a></li>
-    <li><a href="posts/poems/2026/Technical Blade.html">Technical Blade</a></li>
-    <li><a href="posts/poems/2026/Transform.html">Transform</a></li>   
-</ul>
+    <h1>Midori9z7</h1>
+    <p>This blog is used as my tomb.</p>
+    <p>
+        <a href="mailto:wailingrains&#64;qq.com">Email</a> |
+        <a href="rss.xml">RSS(none)</a> |
+        <a href="https://github.com/midori9z7">GitHub</a>
+    </p>
 
-<h2>Music</h2>
-<ul>
-    <!-- 以后写音乐文章就加在这里 -->
-</ul>
+    <div style="clear:both"></div>
 
-<h2>Fragments</h2>
-<ul>
-    <!-- 以后写杂谈文章就加在这里 -->
-</ul>
+        <h2>Blog Posts</h2>
+    <ul>
+        <li>2026 Jul  - <a href="posts/1.html">none</a></li>
+    </ul>
+
+    <h2>Poems</h2>
+    <ul>
+        <li>2026 - <a href="posts/poems/2026/Transform.html">Transform</a></li>
+        <li>2026 - <a href="posts/poems/2026/幻灵，第14号.html">幻灵，第14号</a></li>
+        <li>2026 - <a href="posts/poems/2026/和项王歌.html">和项王歌</a></li>
+        <li>2026 - <a href="posts/poems/2026/Technical Blade.html">Technical Blade</a></li>
+        <li>2026 - <a href="posts/poems/2026/幻灵，第13号.html">幻灵，第13号</a></li>
+        <li>2026 - <a href="posts/poems/2026/幻灵，第6号.html">幻灵，第6号</a></li>
+        <li>2026 - <a href="posts/poems/2026/陈思王梦水.html">陈思王梦水</a></li>
+        <li>2025 - <a href="posts/poems/2025/涸辙之鲋与病变移植.html">涸辙之鲋与病变移植</a></li>
+    </ul>
+
+    <h2>Projects</h2>
+    <ul>
+        <p>still working on it...</p>
+    </ul>
+
+    <h2>Fragments</h2>
+            <p>still working on it...</p>
+        </div>
+    </div>
+
 </body>
 </html>
