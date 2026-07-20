@@ -17,6 +17,14 @@
         font-family: inherit;
         white-space: pre-wrap;
         }
+        @media (prefers-color-scheme: dark) {
+            body { background: #0a0a0a; color: #e0e0e0; }
+            .dark { display: block; }
+            .light { display: none; }
+        }
+        @media (prefers-color-scheme: light) {
+            body { background: #fafafa; color: #1a1a1a; }
+        }
         a { color: #5ea6ff; }
     </style>
 </head>
