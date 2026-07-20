@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>原神：空月之歌</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{
+            background:#000000;
+            background-image:linear-gradient(180deg,#0d0d12 0%,#0000ff 100%);
+            color:#000000;
+            min-height:100vh;
+            letter-spacing:.03em;
+        }
+        .wrap{
+            max-width:880px;
+            margin:0 auto;
+            padding:0 20px;
+        }
+
+        .top{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:22px 0 14px;
+            border-bottom:1px solid #1a1a1f;
+            flex-wrap:wrap;
+            gap:8px;
+        }
+        .logo{
+            font-size:18px;
+            font-weight:700;
+            letter-spacing:.08em;
+            color:#ff0000;
+            background:linear-gradient(180deg,#00FF00);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+            background-clip:text;
+        }
+        .logo span{color:#ff0000}
+        .ver{
+            font-size:9px;
+            letter-spacing:.1em;
+            color:#ff0000;
+        }
+
+        .nav{
+            display:flex;
+            gap:0;
+            border-bottom:1px solid #1a1a1f;
+            flex-wrap:wrap;
+        }
+        .nav a{
+            display:block;
+            padding:12px 18px;
+            color:#FFFF00;
+            text-decoration:none;
+            font-size:10px;
+            letter-spacing:.07em;
+            font-weight:500;
+            transition:.2s;
+        }
+        .nav a:hover,.nav a.on{color:#ff00e6;border-bottom:2px solid #888}
+        .nav a.on{border-bottom-color:#ff0000}
+
+        .grid{
+            display:grid;
+            grid-template-columns:1fr 260px;
+            gap:0;
+        }
+        @media(max-width:700px){.grid{grid-template-columns:1fr}}
+
+        .main{
+            padding:28px 28px 20px 0;
+        }
+        .main .tag{
+            font-size:8px;
+            letter-spacing:.12em;
+            color:#ADFF2F;
+            display:block;
+            margin-bottom:6px;
+        }
+        .main h1{
+            font-size:36px;
+            font-weight:800;
+            letter-spacing:.05em;
+            color:#ff00c8;
+            line-height:1.1;
+            margin-bottom:2px;
+        }
+        .main h1 i{font-style:normal;font-weight:300;color:#cc00ff}
+        .main .sub{
+            font-size:11px;
+            color:#ADFF2F;
+            letter-spacing:.06em;
+            margin-bottom:22px;
+        }
+
+        .cards{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:1px;
+            background:#000000;
+            border:1px solid #ff00ee;
+            margin-bottom:20px;
+        }
+        @media(max-width:480px){.cards{grid-template-columns:1fr}}
+        .card{
+            background:#000080;
+            padding:18px 14px;
+            transition:.2s;
+            position:relative;
+        }
+        .card:hover{background:#008080}
+        .card .n{
+            position:absolute;
+            right:10px;
+            top:2px;
+            font-size:32px;
+            font-weight:800;
+            color:#fe00c76d;
+            pointer-events:none;
+            line-height:1;
+        }
+        .card h4{
+            font-size:11px;
+            letter-spacing:.06em;
+            color:#ff0000;
+            margin-bottom:3px;
+            font-weight:600;
+        }
+        .card p{
+            font-size:10px;
+            color:#00FFFF;
+            line-height:1.7;
+        }
+
+        .btn{
+            display:inline-block;
+            background:linear-gradient(180deg,#2a2a32,#1a1a22);
+            border:1px solid #333;
+            border-top-color:#444;
+            color:#ff0000;
+            padding:9px 22px;
+            font-size:10px;
+            letter-spacing:.08em;
+            cursor:pointer;
+            text-decoration:none;
+            font-weight:500;
+            font-family:inherit;
+            transition:.2s;
+            border-radius:1px;
+            position:relative;
+        }
+        .btn:hover{
+            background:linear-gradient(180deg,#33333d,#22222c);
+            border-color:#555;
+            border-top-color:#666;
+            color:#eee;
+        }
+
+        .side{
+            padding:28px 0 20px 22px;
+            border-left:1px solid #111111;
+        }
+        @media(max-width:700px){.side{border-left:none;border-top:1px solid #15151a;padding:18px 0}}
+        .side h5{
+            font-size:9px;
+            letter-spacing:.1em;
+            color:#00ff00;
+            margin-bottom:12px;
+            padding-bottom:6px;
+            border-bottom:1px solid #15151a;
+            font-weight:600;
+        }
+        .side .up{
+            margin-bottom:10px;
+            padding-bottom:8px;
+            border-bottom:1px solid rgba(255,255,255,.02);
+        }
+        .side .up .d{
+            font-size:10px;
+            color:#ffA500;
+            letter-spacing:.07em;
+            margin-bottom:1px;
+        }
+        .side .up .t{
+            font-size:10px;
+            color:#7CFC00;
+            line-height:1.6;
+        }
+        .side .up .t b{font-weight:600;color:#AAFF00}
+
+        .stat{
+            display:flex;
+            align-items:center;
+            gap:6px;
+            font-size:9px;
+            letter-spacing:.07em;
+            color:#ff00ff;
+            margin-top:14px;
+        }
+        .stat .dot{
+            width:5px;height:5px;border-radius:50%;
+            background:#6a6;
+        }
+
+        .foot{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:14px 0;
+            font-size:8px;
+            letter-spacing:.07em;
+            color:#00ffff;
+            flex-wrap:wrap;
+            gap:6px;
+            border-top:1px solid #15151a;
+        }
+
+        ::-webkit-scrollbar{width:4px}
+        ::-webkit-scrollbar-track{background:#000000}
+        ::-webkit-scrollbar-thumb{background:#1a1a22;border-radius:2px}
+        ::selection{background:#333;color:#ddd}
+    </style>
+</head>
+<body>
+<div class="wrap">
+
+    <div class="top">
+        <div class="logo">GENSHIN IMPACT</div>
+        <div class="ver">v0.001 / 2026</div>
+    </div>
+
+    <div class="nav">
+        <a href="#" class="on">Home</a>
+        <a href="#">Characters</a>
+        <a href="#">NPCS</a>
+        <a href="#">Factions</a>
+        <a href="#">Birthdays</a>
+    </div>
+
+    <div class="grid">
+        <div class="main">
+            <span class="tag">HoYoverse</span>
+            <h1>GENSHIN<i>Impact</i></h1>
+            <p class="sub">Luna VIII</p>
+
+            <div class="cards">
+                <div class="card">
+                    <span class="n">01</span>
+                    <h4>Characters</h4>
+                    <p>原之巅，傲世间，有我原神便有天；罪州前，双膝下，原神救我传天下；</p>
+                </div>
+                <div class="card">
+                    <span class="n">02</span>
+                    <h4>NPCS</h4>
+                    <p>语之巅，劝世间，看我原神劝翻天，坟之巅，葬世间，待我原神挖穿天，3A尽头谁为峰，一见原神道成空，</p>
+                </div>
+                <div class="card">
+                    <span class="n">03</span>
+                    <h4>Factions</h4>
+                    <p>谁在称叩，哪个敢言你大可过来一试，纵使我需背负骂名，一只手拖住腾讯水军，我原神，一样不无敌于世间！</p>
+                </div>
+                <div class="card">
+                    <span class="n">04</span>
+                    <h4>Birthdays</h4>
+                    <p>0705芭芭拉 0709卡维 0714九条裟罗 0715胡桃 0720达达利亚 0724鹿野院平藏 0727久岐忍&可莉 0728烟绯</p>
+                </div>
+            </div>
+
+            <a href="#" class="btn">原神启动 →</a>
+        </div>
+
+        <div class="side">
+            <h5>Activity Log</h5>
+            <div class="up">
+                <div class="d">2022</div>
+                <div class="t">我自爆了！我是一名原神玩家！我没什么好遮遮掩掩的，原神就是我的唯一，我最爱玩的游戏！</div>
+            </div>
+            <div class="up">
+                <div class="d">2023</div>
+                <div class="t">直接来吧！我现在已经逐渐魔怔了，我不知道为什么，我的心里有一种莫名的自豪感，</div>
+            </div>
+            <div class="up">
+                <div class="d">2024</div>
+                <div class="t">可能这就是玩原神的最终形态吧！我完全控制不住我自己，要问为什么我太爱玩原神了啊！！</div>
+            </div>
+            <div class="up">
+                <div class="d">2025</div>
+                <div class="t"><b>你说得对，但是我会用我的红米note11tPro（一种很贵的手机，你买不起）打开原神（一个文化输出的国产顶级3A大作，普通人玩不到）然后抿一口刚买的office（一种高级饮品，美国人都喝这个，但是我认为不如coca可乐）然后带上我买的红米可丽耳机（很贵就对了，很少人买得起，包括你）然后领取原神里的150原石（价值150美元）</b></div>
+            </div>
+
+            <div class="stat">
+                <span class="dot"></span>
+                原神，启动！！！
+            </div>
+        </div>
+    </div>
+
+    <div class="foot">
+        <span>© 2020 HoYoverse</span>
+        <span>midori</span>
+        <span>All rights reserved</span>
+    </div>
+
+</div>
+
+<script>
+document.querySelectorAll('.nav a').forEach(a=>{
+    a.addEventListener('click',function(e){
+        e.preventDefault();
+        document.querySelectorAll('.nav a').forEach(x=>x.classList.remove('on'));
+        this.classList.add('on');
+    });
+});
+document.querySelector('.btn')?.addEventListener('click',function(e){
+    e.preventDefault();
+});
+</script>
+</body>
+</html>
