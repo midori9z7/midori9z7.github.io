@@ -1,117 +1,125 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Midori's Blog</title>
-    <style>
-        body {
-            background: #0a0a0a;
-            color: #e0e0e0;
-            margin: 40px 0px 24px 0px;
-            padding: 0 24px;
-            max-width: 40em;
-            font-family: sans-serif;
-        }
-        pre {
-        font-family: inherit;
-        white-space: pre-wrap;
-        }
-        
-        a { color: #5ea6ff; }
-        h1 { margin: 0; padding: 0.3em 0 0 0; }
-        h2 { margin: 0em 0 0.3em 0; }
-
-        b {
-            color: #ff00ff; /* 到底橙色还是粉色 */
-        }
-
-        img.profile {
-          width: 10em;
-        float: left;
-        padding: 0;
-        margin-right: 1.5em;
-        }
-        .dark { display: none; }
-
-        @media (prefers-color-scheme: dark) {
-            body { background: #0a0a0a; color: #e0e0e0; }
-            .dark { display: block; }
-            .light { display: none; }
-        }
-        @media (prefers-color-scheme: light) {
-            body { background: #fafafa; color: #1a1a1a; }
-        }
-
-        ul { list-style: none; margin: 0; padding: 0; }
-        li { margin: 0.3em 0; }
-
-        .jam { clear: both; margin: 1.5em 0; }
-        .thumbnail { float: left; margin: 0 1em 1em 0; }
-        .thumbnail img { width: 200px; }
+    <link type=text/css rel=stylesheet href="/style.css">
+    <style type="text/css">
+img.profile {
+  width: 10em;
+  float: left;
+  padding: 1em;
+}
+h2 {
+  padding: 0;
+  margin: 0;
+}
+.dark {
+  display: none;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0.5em;
+}
+li {
+  margin: 0;
+  padding: 0.1em;
+}
+.thumbnail {
+  float: left;
+  clear: both;
+  margin: 0 1em 2em 0;
+  padding: 0;
+}
+.jam {
+  clear:both;
+}
+audio {
+  height: 1em;
+  margin-right: 1em;
+}
+.popular {
+  background-color: #e66c00;
+  color: white;
+  border-radius: 1em;
+  padding: 0.2em;
+}
+@media (prefers-color-scheme: dark) {
+  .dark {
+    display: block;
+  }
+  .light {
+    display: none;
+  }
+  .popular {
+    background-color: #ec903f;
+    color: black;
+  }
+}
     </style>
-</head>
-<body>
-    <img class="profile light" alt="bright photo" src="img/shiina 2.jpg">
-    <img class="profile dark" alt="dark photo" src="img/Shiina 1.jpg">
+  </head>
+  <body>
+    <div style="max-width: 42em; margin: 0; padding: 0;">
+  <img class="profile light" alt="bright photo" src="img/shiina 2.jpg">
+  <img class="profile dark" alt="dark photo" src="img/Shiina 1.jpg">
+  <h1 style="margin: 0; padding: 0.3em 0 0 0">Midori9z7</h1>
+  <p>This blog is used as my tomb.</p>
+  <p>
+  <a href="mailto:wailingrains&#64;qq.com">Email</a> |
+  <a href="https://space.bilibili.com/3546736595306856">Bilibili</a> |
+  <a href="https://github.com/midori9z7">GitHub</a>
+  </p>
+</div>
 
-    <h1>Midori9z7</h1>
-    <p>This blog is used as my tomb.</p>
-    <p>
-        <a href="mailto:wailingrains&#64;qq.com">Email</a> |
-        <a href="https://space.bilibili.com/3546736595306856">Bilibili
-        </a> |
-        <a href="https://github.com/midori9z7">GitHub</a>
-    </p>
+<div style="clear:both; float:left; padding: 1em">
+<h2>Blog Posts</h2>
+<ul>
+  <li>2026 Jul 27 - <a href="posts/blog_posts/A game desert that endlessly expands(edited 0829).html">A game desert that endlessly expands(edited 0829)</a></li>
+  <li>2026 Jul 21 - <a href="posts/blog_posts/无休的彩盘和致幻剂.html">无休的彩盘和致幻剂<b>(This article will be updated over time.)</b></a></li>
+  <li>2026 Jul 12 - <a href="posts/blog_posts/The dead past, the helpless present, the psychedelic future.html">The dead past, the helpless present, the psychedelic future</a></li>
+</ul>
+</div>
 
-    <div style="clear:both"></div>
+<div style="float: left; max-width: 42em">
+<h2>Politcs, Political Philosophy</h2>
+<ul>
+  <li><a href="working on it...">working on it...</a></li>
+</ul>
 
-        <h2>Blog Posts</h2>
-    <ul>
-        <li>2026 Jul 27 - <a href="posts/blog_posts/A game desert that endlessly expands(edited 0829).html">A game desert that endlessly expands(edited 0829)</a></li>
-        <li>2026 Jul 21 - <a href="posts/blog_posts/无休的彩盘和致幻剂.html">无休的彩盘和致幻剂<b>(This article will be updated over time.)</b></a></li>
-        <li>2026 Jul 12 - <a href="posts/blog_posts/The dead past, the helpless present, the psychedelic future.html">The dead past, the helpless present, the psychedelic future</a></li>
-    </ul>
+<h2>Poems</h2>
+<ul>
+  <li>2026 - <a href="posts/poems/2026/幻灵，第8号.html">幻灵，第8号</a></li>
+  <li>2026 - <a href="posts/poems/2026/Transform.html">Transform</a></li>
+  <li>2026 - <a href="posts/poems/2026/浣溪沙.html">浣溪沙<b>(These poems will be updated over time.)</b></a></li>
+  <li>2026 - <a href="posts/poems/2026/幻灵，第14号.html">幻灵，第14号</a></li>
+  <li>2026 - <a href="posts/poems/2026/和项王歌.html">和项王歌</a></li>
+  <li>2026 - <a href="posts/poems/2026/Technical Blade.html">Technical Blade</a></li>
+  <li>2026 - <a href="posts/poems/2026/幻灵，第13号.html">幻灵，第13号</a></li>
+  <li>2026 - <a href="posts/poems/2026/幻灵，第6号.html">幻灵，第6号</a></li>
+  <li>2026 - <a href="posts/poems/2026/幻灵，第4号.html">幻灵，第4号</a></li>
+  <li>2026 - <a href="posts/poems/2026/陈思王梦水.html">陈思王梦水</a></li>
+  <li>2025 - <a href="posts/poems/2025/登台病.html">登台病</a></li>
+  <li>2025 - <a href="posts/poems/2025/涸辙之鲋与病变移植.html">涸辙之鲋与病变移植</a></li>
+  <li>2025 - <a href="posts/poems/2025/蝴蝶.html">蝴蝶</a></li>
+  <li>2025 - <a href="posts/poems/2025/断章.html">断章</a></li>
+  <li>2024 - <a href="posts/poems/2024/撕裂.html">撕裂</a></li>
+  <li>2024 - <a href="posts/poems/2024/Untitled.html">Untitled</a></li>
+  <li>2024 - <a href="posts/poems/2024/无题.html">无题</a></li>
+  <li>2024 - <a href="posts/poems/2024/洛神.html">洛神</a></li>
+</ul>
 
-        <h2>Politcs, Political Philosophy</h2>
-    <ul>
-        <li><a href="working on it...">working on it...</a></li>        
-    </ul>
+<h2>Projects</h2>
+<ul>
+  <li><a href="https://">working...</a></li>
+</ul>
+</div>
 
-    <h2>Poems</h2>
-    <ul>
-        <li>2026 - <a href="posts/poems/2026/幻灵，第8号.html">幻灵，第8号</a></li>
-        <li>2026 - <a href="posts/poems/2026/Transform.html">Transform</a></li>
-        <li>2026 - <a href="posts/poems/2026/浣溪沙.html">浣溪沙<b>(These poems will be updated over time.)</b></a></li>
-        <li>2026 - <a href="posts/poems/2026/幻灵，第14号.html">幻灵，第14号</a></li>
-        <li>2026 - <a href="posts/poems/2026/和项王歌.html">和项王歌</a></li>
-        <li>2026 - <a href="posts/poems/2026/Technical Blade.html">Technical Blade</a></li>
-        <li>2026 - <a href="posts/poems/2026/幻灵，第13号.html">幻灵，第13号</a></li>
-        <li>2026 - <a href="posts/poems/2026/幻灵，第6号.html">幻灵，第6号</a></li>
-        <li>2026 - <a href="posts/poems/2026/幻灵，第4号.html">幻灵，第4号</a></li>
-        <li>2026 - <a href="posts/poems/2026/陈思王梦水.html">陈思王梦水</a></li>
-        <li>2025 - <a href="posts/poems/2025/登台病.html">登台病</a></li>
-        <li>2025 - <a href="posts/poems/2025/涸辙之鲋与病变移植.html">涸辙之鲋与病变移植</a></li>
-        <li>2025 - <a href="posts/poems/2025/蝴蝶.html">蝴蝶</a></li>
-        <li>2025 - <a href="posts/poems/2025/断章.html">断章</a></li>
-        <li>2024 - <a href="posts/poems/2024/撕裂.html">撕裂</a></li>
-        <li>2024 - <a href="posts/poems/2024/Untitled.html">Untitled</a></li>
-        <li>2024 - <a href="posts/poems/2024/无题.html">无题</a></li>
-        <li>2024 - <a href="posts/poems/2024/洛神.html">洛神</a></li>
-    </ul>
-
-    <h2>Projects</h2>
-    <ul>
-        <li><a href="https://github.com/midori9z7/CFS">My shitty C learning project</a></li>
-        <li><a href="https://github.com/midori9z7/FFS">My shitty Fortran learning project</a></li>        
-    </ul>
-
-<hr style="border: none; border-top: 1px solid #555; margin-top: 0em;">
-    <footer>
-    <p><small>
-        Code <a href="https://wtfpl.net/">WTFPL v2</a> ·
-        Posts <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>
-    </small></p>
-</footer>
-</body>
+<hr style="clear: both;">
+<footer><p><small>
+  Code <a href="https://wtfpl.net/">WTFPL v2</a> ·
+  Posts <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>
+</small></p></footer>
+  </body>
 </html>

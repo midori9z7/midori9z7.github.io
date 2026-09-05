@@ -1,0 +1,75 @@
+body {
+  font-family: system-ui, -apple-system, Roboto, "Segoe UI", sans-serif;
+}
+.post {
+  max-width: 72em;
+}
+pre {
+  overflow-x: scroll;
+  background-color: #eee;
+  border: 1px solid #3a3a3a;
+  padding: 0.5em;
+  line-height: 1.4em;
+}
+.diff0 {
+  color: #990000;
+}
+.diff1 {
+  color: #009900;
+}
+.dark {
+  display: none;
+}
+
+blockquote {
+  font-family: serif;
+  color: green;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: black;
+    color: white;
+  }
+  a {
+    color: #89a6ff;
+  }
+  a:visited {
+    color: #f690ff;
+  }
+  pre {
+    background-color: #1e1e1e;
+    border: 1px solid gray;
+  }
+  code {
+    background-color: #1e1e1e;
+  }
+  .diff0 {
+    color: #ff613c;
+  }
+  .diff1 {
+    color: #41ce41;
+  }
+  img.bright {
+    background-color: white;
+    border: 4px solid #3c3c3c;
+  }
+  .dark {
+    display: unset;
+  }
+  .light {
+    display: none;
+  }
+  blockquote {
+    color: lightgreen;
+  }
+}
+
+/* plain pre (no <code> child): no box, like prose */
+pre:not(:has(code)) {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  overflow-x: visible;
+  white-space: pre-wrap;
+}
