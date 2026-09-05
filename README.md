@@ -1,9 +1,10 @@
 # midori9z7.github.io
-My personal shitty site.
 
-## License
+My personal blog.
 
-All original written works in this repository are licensed under
+## License / 许可
+
+All original works in this repository are licensed under
 **Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)**.
 You may share (copy and redistribute) with attribution, but NOT commercially, and NOT remix/modify.
 
