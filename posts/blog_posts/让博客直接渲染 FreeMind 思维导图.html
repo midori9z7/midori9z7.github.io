@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>让博客直接渲染 FreeMind 思维导图</title>
+    <link rel="stylesheet" href="/paper.css">
+</head>
+<body>
+<article class="paper">
+<header class="paper-head">
+<h1 class="title">让博客直接渲染 FreeMind 思维导图</h1>
+<p class="meta">Midori9z7 · 2026 Sep 19</p>
+</header>
+<p>这篇记录的是思维导图渲染的全过程。仓库里放 FreeMind 的源文件了。</p>
+
+<h2>一、起因</h2>
+
+<p>显然最省事的做法是导出图片：FreeMind<sup><a href="#ref4">[4]</a></sup> 里画完，导出一张 PNG，<code>&lt;img&gt;</code> 一贴完事，但是深色模式做不了啊。导出的图自带白底黑字，贴到纯黑的页面上就是一块白砖。做两张图（浅色一张、深色一张）再按 <code>prefers-color-scheme</code> 切换能解决，但每次改图都要导出两次、改两个文件名、重贴两次路径。</p>
+
+<p>二是图和文分家，进了 git 看不出改了什么，想微调一个措辞也得回到 FreeMind 里重来一遍导出流程。</p>
+
+<p>所以换了个思路：仓库里只放 <code>.mm</code>，让页面自己去读、自己去画。</p>
+
+<h2>二、为什么是 .mm</h2>
+
+<p>FreeMind 的 <code>.mm</code> 本质上就是一个 XML 文本，简单到可以用几行代码讲完：一个 <code>&lt;map&gt;</code>，里面一个根 <code>&lt;node&gt;</code>，每个节点把自己的文字放在 <code>TEXT</code> 属性里，子节点就是嵌套的 <code>&lt;node&gt;</code>。</p>
+
+<pre><code>&lt;map version="1.0.1"&gt;
+  &lt;node TEXT="根节点"&gt;
+    &lt;node TEXT="分支一"&gt;
+      &lt;node TEXT="叶子"/&gt;
+    &lt;/node&gt;
+    &lt;node TEXT="分支二" FOLDED="true"&gt;……&lt;/node&gt;
+  &lt;/node&gt;
+&lt;/map&gt;</code></pre>
+
+<p>是纯文本，就意味着它能进 git、能 diff、改一次只覆盖一个文件；也意味着里面的颜色、字体可以完全不写死在图里，交给页面的 CSS 决定。</p>
+
+<h2>三、整体链路</h2>
+
+<p>整条路没有任何构建步骤，全部发生在浏览器里。下面这张图即是 <code>mindmaps/blog-pipeline.mm</code> 被页面当场读出来的结果——左边那个圆圈是默认折叠的节点，点一下会展开：</p>
+
+<div class="mindmap" data-src="/mindmaps/blog-pipeline.mm"></div>
+
+<h2>四、实现</h2>
+
+<h3>4.1 把 .mm 读成一棵树</h3>
+
+<p>用 <code>DOMParser</code><sup><a href="#ref5">[5]</a></sup> 解析 XML，然后从根节点递归下来。这里有两个细节：只认直接的 <code>&lt;node&gt;</code> 子元素（跳过 <code>&lt;font&gt;</code>、<code>&lt;edge&gt;</code>、<code>&lt;icon&gt;</code> 这些兄弟），以及每个节点都必须带 <code>children</code> 数组，叶子节点也不能省——原因在第五节。</p>
+
+<pre><code>function build(el) {
+  var node = {
+    content: escapeHTML(el.getAttribute('TEXT') || ''),
+    children: []
+  };
+  for (var i = 0; i &lt; el.children.length; i++) {
+    var child = el.children[i];
+    if (child.tagName === 'node') node.children.push(build(child));
+  }
+  if (el.getAttribute('FOLDED') === 'true') node.payload = { fold: 1 };
+  return node;
+}</code></pre>
+
+<p>节点文字要转义成 HTML 实体。markmap 会把内容当 HTML 插进去，FreeMind 的节点里只要有一个 <code>&amp;</code> 或者尖括号，不转义就会把结构写坏。</p>
+
+<h3>4.2 按需加载两个依赖</h3>
+
+<p>画图交给 markmap<sup><a href="#ref1">[1]</a></sup>。它的浏览器版是一个 IIFE，导出到全局 <code>window.markmap</code><sup><a href="#ref2">[2]</a></sup>，但不自带 d3<sup><a href="#ref3">[3]</a></sup>——包装函数的签名是 <code>(exports, d3)</code>，得先有全局d3才能跑。所以两个文件都要有，我把它们下载到 <code>vendor/</code> 自托管，不用 CDN：少一个外部依赖，也不怕哪天链接失效。</p>
+
+<pre><code>function loadScript(src) {
+  return new Promise(function (resolve, reject) {
+    var s = document.createElement('script');
+    s.src = src;
+    s.onload = resolve;
+    s.onerror = function () { reject(new Error('加载失败：' + src)); };
+    document.head.appendChild(s);
+  });
+}
+
+function loadLibs() {
+  if (!libs) {
+    libs = loadScript(base + 'vendor/d3.min.js')
+      .then(function () {
+        return loadScript(base + 'vendor/markmap-view.min.js');
+      });
+  }
+  return libs;
+}</code></pre>
+
+<p>关键在于这两个脚本只在页面上真的出现导图时才注入。没有导图的文章不会多下这三百 KB 里哪怕一个字节。</p>
+
+<h3>4.3 交给 markmap 画</h3>
+
+<p>拿到树之后，new 一个实例、<code>setData()</code>、<code>fit()</code>：</p>
+
+<pre><code>var mm = new window.markmap.Markmap(svg, {
+  autoFit: true,
+  initialExpandLevel: -1,
+  zoom: false,
+  pan: false,
+  color: function () { return line; },
+  lineWidth: function () { return 1.1; }
+});
+mm.setData(tree).then(function () { mm.fit(); });</code></pre>
+
+<p>颜色只给一个，不按层级分色——彩虹色的导图放进一篇文章里太吵，单色的连线和正文更搭。文字颜色不走这个参数，见下一节。</p>
+
+<h3>4.4 让颜色跟着主题走</h3>
+
+<p>markmap 把自带的 CSS 内联成一个 <code>&lt;style&gt;</code> 塞进 SVG，里面用一组 CSS 变量控制外观：<code>--markmap-text-color</code>、<code>--markmap-circle-open-bg</code>、<code>--markmap-font</code> 等等。所以文字颜色不用写进 JS，只要在自己的 CSS 里把这几个变量重新指一遍，指向页面的变量即可：</p>
+
+<pre><code>.mindmap .markmap {
+  --markmap-font: inherit;
+  --markmap-text-color: var(--ink);
+  --markmap-circle-open-bg: var(--paper);
+}</code></pre>
+
+<p>连线颜色是个例外——它是 SVG 的属性，不是 CSS 变量，只能由 <code>color</code> 参数给定。做法是在渲染前用 <code>getComputedStyle</code><sup><a href="#ref6">[6]</a></sup> 把当前的 <code>--mm-line</code> 读成一个具体色值传进去；再监听 <code>prefers-color-scheme</code><sup><a href="#ref7">[7]</a></sup> 的变化，系统一换主题就重画一遍。</p>
+
+<h3>4.5 温馨小提醒</h3>
+
+<p>导图渲染失败的原因无非几种：文件不存在、XML 坏了、依赖没加载上。这些都要变成能看懂的话，而不是一片空白。出问题时把容器换成一句说明加一个「下载 .mm 源文件」的链接；正常渲染时，图下面也会常驻一个指向源文件的链，方便直接拿走原始文件。</p>
+
+<h2>五、三个坑</h2>
+
+<p>一是 <code>color</code> 和 <code>lineWidth</code> 必须是函数。 第一版页面加载后导图区域全空，控制台里是 <code>TypeError: n is not a function</code>。查下来：markmap 文档里写着颜色可以传数组、线宽可以传数字来简写，但那个简写只在它的 <code>deriveOptions()</code> 里生效，而 <code>Markmap</code> 的构造函数并不调用它——直接把数组塞进 options，它就会在渲染时把数组当函数调用。</p>
+
+<p>二是每个节点都必须带 <code>children</code>，叶子也不能省。 第二版解析器为了省字节，在没有子节点时把 <code>children</code> 删掉了，结果报 <code>Cannot read properties of undefined (reading 'map')</code>。markmap 在算连线时直接写了 <code>node.children.map(...)</code>，不像遍历那样容忍 <code>undefined</code>。</p>
+
+<p>三是样式优先级。 markmap 内联的那个 <code>&lt;style&gt;</code> 在文档里的位置比 <code>paper.css</code> 更靠后，两边都写 <code>.markmap { --markmap-text-color: ... }</code>，同权重下后写的赢——深色模式下文字仍是它默认的深灰，在纯黑背景上几乎看不见。把自己的选择器写成 <code>.mindmap .markmap</code>，用权重压过去就好。</p>
+
+<p>还有一个不算坑但容易卡住的点：<code>Markmap.create()</code> 内部是异步的，渲染阶段的报错会变成未捕获的 promise，外层包 <code>try/catch</code> 或 <code>.catch()</code> 都接不到，页面上只会静悄悄地空着。所以这里没用 <code>create()</code>，而是自己 new 实例、<code>setData()</code> 之后接 <code>.catch()</code>。</p>
+
+<h2>六、取舍</h2>
+
+<p>默认关掉了滚轮缩放和拖动平移。开着的时候，鼠标只要停在导图上，滚轮就变成缩放，页面滚不动，搞得我有点难受。想开的话，把 <code>zoom</code> 和 <code>pan</code> 改成 <code>true</code> 就行。</p>
+
+<p>解析器只读 <code>TEXT</code>。字体、图标、节点配色、备注、箭头链接都不还原，统一走文章的样式。对纯文字导图来说这足够了；真要还原富文本，得换成专门处理 FreeMind 格式的组件，代价是包体和复杂度都上一个台阶。
+其实我觉得这挺好的很干净。</p>
+
+<p>导图会按容器大小自动缩放，所以层次特别深、节点特别长的图会缩得比较小。</p>
+
+<h2>七、文件结构</h2>
+
+<table>
+<caption>表 1&nbsp;&nbsp;这套东西由哪些文件组成</caption>
+<thead>
+<tr><th>文件</th><th>作用</th></tr>
+</thead>
+<tbody>
+<tr><td><code>mindmap.js</code></td><td>读取 <code>.mm</code> 并渲染，约 150 行，无框架</td></tr>
+<tr><td><code>vendor/d3.min.js</code></td><td>自托管依赖，d3 v7.9.0</td></tr>
+<tr><td><code>vendor/markmap-view.min.js</code></td><td>自托管依赖，markmap-view 0.18.12</td></tr>
+<tr><td><code>mindmaps/*.mm</code></td><td>FreeMind 源文件</td></tr>
+<tr><td><code>paper.css</code></td><td>导图容器的尺寸和上面那组 CSS 变量</td></tr>
+</tbody>
+</table>
+
+<h2>八、使用</h2>
+
+<p>在 FreeMind 里画完存成 <code>.mm</code>，丢进 <code>mindmaps/</code>，文章里写两行：</p>
+
+<pre><code>&lt;div class="mindmap" data-src="/mindmaps/xxx.mm"&gt;&lt;/div&gt;
+&lt;script src="/mindmap.js" defer&gt;&lt;/script&gt;</code></pre>
+
+<p>一个页面可以放多张，每个 <code>div</code> 写自己的 <code>data-src</code>。没有导图的文章第二行可以不写。</p>
+
+<h2>九、零元购</h2>
+
+<p>GitHub Pages 对公开仓库免费，FreeMind 是免费软件，d3 和 markmap 分别是 ISC 与 MIT 授权，而且已经下载进仓库自托管，不依赖任何 CDN 账号。唯一要留意的是 GitHub Pages<sup><a href="#ref8">[8]</a></sup>站点 1 GB 左右、每月约 100 GB 流量但是我仓库现在总共五百多 KB大概一辈子用不到限制的。</p>
+
+<h2>十、结语</h2>
+
+<p>总的来说反正我写的时候也不用想，导图就是仓库里的一个文本文件，改完覆盖，页面刷新就变。代价是多写了一百多行 JS，以及踩了几个坑。呃反正我也写不太好能跑就行。</p>
+
+<h2>参考文献</h2>
+
+<ol>
+<li id="ref1">markmap：把 Markdown 大纲画成思维导图的项目主页。<a href="https://markmap.js.org/">markmap.js.org</a></li>
+<li id="ref2">markmap-view 0.18.12：本文实际使用的渲染库，浏览器版导出到全局 <code>window.markmap</code>。<a href="https://www.npmjs.com/package/markmap-view">npmjs.com/package/markmap-view</a></li>
+<li id="ref3">D3.js v7：markmap 的运行时依赖，负责布局、缩放与选择器。<a href="https://d3js.org/">d3js.org</a></li>
+<li id="ref4">FreeMind：<code>.mm</code> 文件的编辑器，GPL 授权。<a href="https://freemind.sourceforge.io/">freemind.sourceforge.io</a></li>
+<li id="ref5">DOMParser：把 <code>.mm</code> 的文本解析成 XML 文档。<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/DOMParser">MDN Web Docs</a></li>
+<li id="ref6">Window.getComputedStyle()：读取当前的 CSS 变量值，用来取得连线颜色。<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/getComputedStyle">MDN Web Docs</a></li>
+<li id="ref7">prefers-color-scheme：监听系统深浅色切换，触发导图重画。<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/@media/prefers-color-scheme">MDN Web Docs</a></li>
+<li id="ref8">GitHub Pages 限制。<a href="https://docs.github.com/zh/pages/getting-started-with-github-pages/github-pages-limits">GitHub Docs</a></li>
+</ol>
+<footer class="colophon">
+<p>Thanks for reading my blog post.</p>
+<p><a href="/index.html">Home Page</a> |
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a></p>
+</footer>
+</article>
+<script src="/mindmap.js" defer></script>
+</body>
+</html>

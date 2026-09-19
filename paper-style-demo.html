@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>论文样式示例 - Midori9z7</title>
+<link rel="stylesheet" href="/paper.css">
+</head>
+<body>
+<article class="paper">
+
+  <header class="paper-head">
+    <h1 class="title">论文样式元素示例</h1>
+    <p class="meta">Midori9z7 · 版式参考</p>
+  </header>
+
+  <p>这一页用来展示 <code>paper.css</code> 覆盖到的各种元素：段落、标题、引文、
+  图表、代码、注释与参考文献。文章页（<code>posts/</code> 下的所有页面）使用的就是这套样式。</p>
+
+  <h2>1&nbsp;&nbsp;段落与标题</h2>
+
+  <p>中文段落首行缩进两字，两端对齐，段间只留极小间距，因此整块文字看起来是连续而整齐的。
+  标题不使用大号字，依靠加粗与上下留白区分层级。</p>
+
+  <h3>1.1&nbsp;&nbsp;三级标题</h3>
+
+  <p>需要的话可以继续细分。引文用左侧竖线标记，字号略小：</p>
+
+  <blockquote>
+    <p>版式的目的不是装饰，而是让读者忘记版式的存在。</p>
+  </blockquote>
+
+  <h2>2&nbsp;&nbsp;表格与图</h2>
+
+  <table>
+    <caption>表 1&nbsp;&nbsp;元素样式一览</caption>
+    <thead>
+      <tr><th>元素</th><th>处理方式</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>正文段落</td><td>两端对齐、首行缩进两字</td></tr>
+      <tr><td>诗歌文本</td><td>保留换行，不缩进</td></tr>
+      <tr><td>图表说明</td><td>小字号、灰色</td></tr>
+      <tr><td>页脚</td><td>居中小字，上方一条细线</td></tr>
+    </tbody>
+  </table>
+
+  <figure>
+    <img src="/img/Shiina 1.jpg" alt="示例插图">
+    <figcaption>图 1&nbsp;&nbsp;示例插图（占位）</figcaption>
+  </figure>
+
+  <h2>3&nbsp;&nbsp;诗歌与代码</h2>
+
+  <p>诗歌使用 <code>&lt;pre class="verse"&gt;</code>，保留原始换行：</p>
+
+  <pre class="verse">
+复数的吻按捺绝路的灵魂
+黎明始终卡在某种透明的阵痛里
+
+我们在掉落的漆锈下
+打捞彼此虚幻的轮廓……</pre>
+
+  <p>代码块使用 <code>&lt;pre&gt;&lt;code&gt;</code>：</p>
+
+  <pre><code>body {
+  max-width: 42rem;
+  line-height: 1.85;
+}</code></pre>
+
+  <h2>4&nbsp;&nbsp;注释与参考文献</h2>
+
+  <p>注释使用上标<sup><a href="#n1" id="r1">1</a></sup>，文末回跳。</p>
+
+  <hr>
+
+  <section>
+    <h2>注释</h2>
+    <p style="text-indent:0">1. 这是一条示例注释。<a href="#r1">↩</a></p>
+  </section>
+
+  <section>
+    <h2>参考文献</h2>
+    <p style="text-indent:0">[1] Bringhurst, R. <i>The Elements of Typographic Style</i>. Hartley &amp; Marks, 2004.</p>
+    <p style="text-indent:0">[2] 小林章. 《西文字体》. 中信出版社, 2014.</p>
+  </section>
+
+  <footer class="colophon">
+    <p>深色模式会跟随系统设置自动切换。</p>
+    <p><a href="/index.html">Home Page</a> |
+    <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a></p>
+  </footer>
+
+</article>
+</body>
+</html>

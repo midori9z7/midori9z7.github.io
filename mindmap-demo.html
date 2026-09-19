@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>思维导图渲染试验 - Midori9z7</title>
+<link rel="stylesheet" href="/paper.css">
+</head>
+<body>
+<article class="paper">
+
+  <header class="paper-head">
+    <h1 class="title">思维导图渲染试验</h1>
+    <p class="meta">Midori9z7 · mindmap.js</p>
+  </header>
+
+  <p>下面这张图不是图片，也不是外链：它就是 <code>mindmaps/demo.mm</code>
+  这个 FreeMind 文件，被页面当场读出来画成的。你可以在 FreeMind 里改完直接覆盖它，
+  页面刷新就变。</p>
+
+  <div class="mindmap" data-src="/mindmaps/demo.mm"></div>
+
+  <h2>用法</h2>
+
+  <p>文章里只要两行：</p>
+
+  <pre><code>&lt;div class="mindmap" data-src="/mindmaps/xxx.mm"&gt;&lt;/div&gt;
+&lt;script src="/mindmap.js" defer&gt;&lt;/script&gt;</code></pre>
+
+  <p>一个页面可以放多张，每个 <code>div</code> 写自己的 <code>data-src</code> 就行。
+  只有真的出现导图的页面才会去加载 d3 和 markmap（约 300 KB），其他页面不受影响。</p>
+
+  <h2>说明</h2>
+
+  <table>
+    <caption>表 1&nbsp;&nbsp;当前支持与不支持</caption>
+    <thead>
+      <tr><th>项目</th><th>情况</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>节点文字</td><td>读取 <code>TEXT</code> 属性，原样显示</td></tr>
+      <tr><td>层级</td><td>按嵌套关系还原</td></tr>
+      <tr><td>折叠状态</td><td>支持 <code>FOLDED="true"</code>，页面上也能点开点合</td></tr>
+      <tr><td>缩放 / 平移</td><td>默认关闭，否则鼠标停在图上会滚不动页面；想开就把 <code>mindmap.js</code> 里的 <code>zoom</code> / <code>pan</code> 改成 <code>true</code></td></tr>
+      <tr><td>深色模式</td><td>跟随系统自动换色</td></tr>
+      <tr><td>字体 / 图标 / 连线颜色</td><td>暂不还原，统一走页面的样式</td></tr>
+      <tr><td>备注、箭头链接、富文本</td><td>暂不还原</td></tr>
+    </tbody>
+  </table>
+
+  <p>另外：<code>.mm</code> 必须通过 http(s) 访问，本地双击 HTML 打不开（和
+  <code>/paper.css</code> 一样的限制）。渲染失败时页面上会留一个
+  「下载 .mm 源文件」的链接兜底。</p>
+
+  <footer class="colophon">
+    <p>试验页，确认后再决定要不要接进文章模板。</p>
+    <p><a href="/index.html">Home Page</a> |
+    <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a></p>
+  </footer>
+
+</article>
+<script src="/mindmap.js" defer></script>
+</body>
+</html>
