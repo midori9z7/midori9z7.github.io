@@ -235,6 +235,188 @@ hr {
   text-indent: 0;
 }
 
+/* 单元目录与可折叠正文 */
+
+.toc {
+  margin: 1.6rem 0 2.4rem;
+  padding: 1rem 1.2rem;
+  background-color: var(--tint);
+  font-size: .85rem;
+}
+
+.toc ol {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.toc li { margin: .15rem 0; }
+
+.unit {
+  margin: 0 0 1.4rem;
+  border-top: 1px solid var(--rule);
+}
+
+.unit > summary {
+  margin: 1.2rem 0 .2rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.unit > summary:hover { color: var(--foot-link); }
+
+.unit[open] > summary { margin-bottom: .4rem; }
+
+/* 侧边目录：窄屏是「目录」按钮 + 抽屉，够宽就变成纸张右边的固定栏 */
+
+.side-toc {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(18rem, 86vw);
+  height: 100%;
+  padding: 1.3rem 1rem 2rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background-color: var(--paper);
+  border-left: 1px solid var(--rule);
+  box-shadow: -1px 0 6px rgba(0, 0, 0, .12);
+  transform: translateX(102%);
+  transition: transform .22s ease;
+  z-index: 40;
+  font-size: .82rem;
+  line-height: 1.5;
+}
+
+.side-toc.is-open { transform: none; }
+
+.side-toc-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 .9rem;
+  padding-bottom: .55rem;
+  border-bottom: 1px solid var(--rule);
+  font-size: .92rem;
+  font-weight: 700;
+}
+
+.side-toc-close {
+  padding: 0 .3rem;
+  font: inherit;
+  font-size: 1.1rem;
+  line-height: 1;
+  color: var(--ink-soft);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.side-toc-list,
+.side-toc-list ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.side-toc-list > li + li { margin-top: .6rem; }
+
+.side-toc-unit > a {
+  display: block;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+/* 高亮统一用博客的紫色 var(--foot-link)，跟着深浅色主题走 */
+.side-toc-unit > a:hover { color: var(--foot-link); }
+
+.side-toc-unit.is-active > a { color: var(--foot-link); }
+
+.side-toc-lesson > a {
+  display: block;
+  padding: .12rem 0 .12rem .7rem;
+  border-left: 1px solid var(--rule);
+  color: var(--ink-soft);
+}
+
+.side-toc-lesson > a:hover {
+  color: var(--foot-link);
+  border-left-color: var(--foot-link);
+}
+
+.side-toc-lesson.is-active > a {
+  color: var(--foot-link);
+  border-left-color: var(--foot-link);
+  font-weight: 700;
+}
+
+.toc-fab {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 41;
+  padding: .5rem 1rem;
+  font: inherit;
+  font-size: .8rem;
+  color: var(--paper);
+  background-color: var(--ink);
+  border: none;
+  border-radius: 4px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+
+.toc-fab:hover {
+  color: var(--paper);
+  background-color: var(--foot-link);
+}
+
+.toc-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 39;
+  background-color: rgba(0, 0, 0, .35);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .22s ease;
+}
+
+.toc-backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* 78rem 以上纸张两侧才够地方放这一栏 */
+@media (min-width: 78rem) {
+  .side-toc {
+    right: auto;
+    left: calc(50% + 21rem + 1.25rem);
+    width: 15rem;
+    padding: 2.6rem .7rem 2.6rem 0;
+    background: none;
+    border-left: none;
+    box-shadow: none;
+    transform: none;
+    transition: none;
+    font-size: .76rem;
+    line-height: 1.45;
+  }
+
+  .side-toc-head { font-size: .8rem; }
+
+  .side-toc-close,
+  .toc-fab,
+  .toc-backdrop { display: none; }
+}
+
+/* 锚点跳转留一点余量，别贴着屏幕顶 */
+h3[id],
+details.unit { scroll-margin-top: 1rem; }
+
 sup a { text-decoration: none; }
 
 /* 页脚 */
@@ -272,6 +454,17 @@ sup a { text-decoration: none; }
   a { color: inherit; }
 
   .colophon { margin-top: 2rem; }
+
+  .toc {
+    padding: 0;
+    background: none;
+  }
+
+  .unit > summary { cursor: default; }
+
+  .side-toc,
+  .toc-fab,
+  .toc-backdrop { display: none; }
 }
 
 /* 窄屏 */

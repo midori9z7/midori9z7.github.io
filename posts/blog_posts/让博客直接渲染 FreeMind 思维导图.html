@@ -88,7 +88,7 @@ function loadLibs() {
   return libs;
 }</code></pre>
 
-<p>关键在于这两个脚本只在页面上真的出现导图时才注入。没有导图的文章不会多下这三百 KB 里哪怕一个字节。</p>
+<p>关键在于这两个脚本只在页面上真的出现导图时才注入——后来连这一步都往后推迟了，要等导图滚进视野。没有导图的文章不会多下这三百 KB 里哪怕一个字节；一页挂三十张导图，开头也只先拉看得见的那几张。</p>
 
 <h3>4.3 交给 markmap 画</h3>
 
@@ -149,11 +149,12 @@ mm.setData(tree).then(function () { mm.fit(); });</code></pre>
 <tr><th>文件</th><th>作用</th></tr>
 </thead>
 <tbody>
-<tr><td><code>mindmap.js</code></td><td>读取 <code>.mm</code> 并渲染，约 150 行，无框架</td></tr>
+<tr><td><code>mindmap.js</code></td><td>读取 <code>.mm</code> 并渲染，滚进视野才动手，约 210 行，无框架</td></tr>
 <tr><td><code>vendor/d3.min.js</code></td><td>自托管依赖，d3 v7.9.0</td></tr>
 <tr><td><code>vendor/markmap-view.min.js</code></td><td>自托管依赖，markmap-view 0.18.12</td></tr>
-<tr><td><code>mindmaps/*.mm</code></td><td>FreeMind 源文件</td></tr>
-<tr><td><code>paper.css</code></td><td>导图容器的尺寸和上面那组 CSS 变量</td></tr>
+<tr><td><code>mindmaps/**/*.mm</code></td><td>FreeMind 源文件；可以再分目录，例如 <code>mindmaps/中外历史纲要上/&lt;单元&gt;/第01课 ….mm</code></td></tr>
+<tr><td><code>side-toc.js</code></td><td>从正文的 <code>&lt;details&gt;</code>、<code>&lt;h3&gt;</code> 生成侧边目录，约 190 行，可选；目前只有历史笔记那页用</td></tr>
+<tr><td><code>paper.css</code></td><td>导图容器的尺寸、上面那组 CSS 变量，以及侧边目录的样式</td></tr>
 </tbody>
 </table>
 

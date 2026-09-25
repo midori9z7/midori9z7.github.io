@@ -1,7 +1,7 @@
 /* mindmap.js — 把 FreeMind 的 .mm 渲染成导图
    <div class="mindmap" data-src="/mindmaps/x.mm"></div>
    <script src="/mindmap.js" defer></script>
-   d3 与 markmap-view 只在页面出现导图时才加载 */
+   d3 与 markmap-view 只在页面出现导图、且导图滚到眼前时才加载 */
 
 (function () {
   'use strict';
@@ -73,10 +73,12 @@
 
   function draw(entry) {
     var svg = document.createElementNS(SVG_NS, 'svg');
-    entry.svg.replaceWith(svg);
+    if (entry.svg) entry.svg.replaceWith(svg);
+    else entry.box.appendChild(svg);
     entry.svg = svg;
 
     var line = lineColor();
+    entry.line = line;
 
     // color / lineWidth 必须是函数，markmap 内部会直接调用
     var mm = new window.markmap.Markmap(svg, {
@@ -93,12 +95,17 @@
       color: function () { return line; },   // 连线单色
       lineWidth: function () { return 1.1; }
     });
+    entry.mm = mm;
 
-    return mm.setData(entry.tree).then(function () { mm.fit(); });
+    return mm.setData(entry.tree).then(function () {
+      // 折叠着的 <details> 里容器宽度是 0，这时 fit() 会把图缩坏，等展开再贴合
+      if (entry.box.clientWidth > 0) mm.fit();
+    });
   }
 
   function fail(box, src, err) {
     box.classList.add('mindmap-error');
+    box.removeAttribute('aria-busy');
     box.innerHTML = '';
     var p = document.createElement('p');
     p.className = 'mindmap-src';
@@ -115,13 +122,13 @@
     box.parentNode.insertBefore(p, box.nextSibling);
   }
 
-  Array.prototype.forEach.call(containers, function (box) {
-    var src = box.getAttribute('data-src');
+  function load(entry) {
+    if (entry.state !== 'idle') return;
+    entry.state = 'loading';
+
+    var box = entry.box, src = entry.src;
     box.setAttribute('aria-busy', 'true');
     box.textContent = '正在加载导图…';
-
-    var entry = { box: box, src: src, svg: null, tree: null };
-    entries.push(entry);
 
     fetch(src)
       .then(function (r) {
@@ -134,24 +141,67 @@
       })
       .then(function () {
         box.textContent = '';
-        var svg = document.createElementNS(SVG_NS, 'svg');
-        box.appendChild(svg);
-        entry.svg = svg;
         return draw(entry);
       })
       .then(function () {
         box.removeAttribute('aria-busy');
+        entry.state = 'done';
         sourceLink(box, src);
       })
-      .catch(function (err) { fail(box, src, err); });
+      .catch(function (err) {
+        entry.state = 'failed';
+        fail(box, src, err);
+      });
+  }
+
+  function redraw(entry) {
+    draw(entry).catch(function (err) { console.error('[mindmap] redraw failed', err); });
+  }
+
+  Array.prototype.forEach.call(containers, function (box) {
+    entries.push({
+      box: box,
+      src: box.getAttribute('data-src'),
+      svg: null,
+      mm: null,
+      tree: null,
+      line: null,
+      state: 'idle'
+    });
   });
+
+  // 滚到眼前才去 fetch + 画。折叠在 <details> 里的导图不会命中，
+  // 所以「展开某个单元」本身就是一次懒加载的触发。
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (records) {
+      records.forEach(function (rec) {
+        if (!rec.isIntersecting) return;
+        io.unobserve(rec.target);
+        for (var i = 0; i < entries.length; i++) {
+          if (entries[i].box === rec.target) { load(entries[i]); return; }
+        }
+      });
+    }, { rootMargin: '400px 0px' });
+    entries.forEach(function (entry) { io.observe(entry.box); });
+  } else {
+    entries.forEach(load);
+  }
+
+  // <details> 收起时容器宽度归零，重新展开要重新贴合；主题换过色则重画
+  document.addEventListener('toggle', function (e) {
+    var d = e.target;
+    if (!d || d.tagName !== 'DETAILS' || !d.open) return;
+    entries.forEach(function (entry) {
+      if (!entry.mm || !d.contains(entry.box)) return;
+      if (entry.line !== lineColor()) redraw(entry);
+      else if (entry.box.clientWidth > 0) entry.mm.fit();
+    });
+  }, true);
 
   var mq = window.matchMedia('(prefers-color-scheme: dark)');
   var onChange = function () {
     entries.forEach(function (entry) {
-      if (entry.svg && entry.tree) {
-        draw(entry).catch(function (err) { console.error('[mindmap] redraw failed', err); });
-      }
+      if (entry.tree && entry.mm) redraw(entry);
     });
   };
   if (mq.addEventListener) mq.addEventListener('change', onChange);
