@@ -5,17 +5,20 @@ My personal blog.
 ## 结构
 
 ```
-index.html / aboutme.html   首页与自我介绍（用 style.css）
-style.css                   首页样式
-paper.css                   文章页样式（文章与诗都用它）
-mindmap.js                  把 FreeMind 的 .mm 渲染成导图
+index.html / aboutme.html   首页与自我介绍
+assets/css/style.css        首页样式
+assets/css/paper.css        文章页样式（文章与诗都用它）
+assets/js/mindmap.js        把 FreeMind 的 .mm 渲染成导图
+assets/js/side-toc.js       从页面结构生成侧边目录（历史笔记页用）
+assets/img/                 头像等图片
+assets/vendor/              自托管依赖：d3、markmap-view
+demo/                       版式与导图的示例页（paper-style-demo、mindmap-demo）
 mindmaps/                   导图源文件（.mm）
-vendor/                     自托管依赖：d3、markmap-view
 posts/                      文章、诗、笔记
 posts/poems/*/index.html    各年份的诗歌列表页
 ```
 
-文章页骨架、导图用法见 `paper-style-demo.html` 与 `mindmap-demo.html`。
+文章页骨架、导图用法见 `demo/paper-style-demo.html` 与 `demo/mindmap-demo.html`。
 
 ## License / 许可
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>让博客直接渲染 FreeMind 思维导图</title>
-    <link rel="stylesheet" href="/paper.css">
+    <link rel="stylesheet" href="/assets/css/paper.css">
 </head>
 <body>
 <article class="paper">
@@ -66,7 +66,7 @@
 
 <h3>4.2 按需加载两个依赖</h3>
 
-<p>画图交给 markmap<sup><a href="#ref1">[1]</a></sup>。它的浏览器版是一个 IIFE，导出到全局 <code>window.markmap</code><sup><a href="#ref2">[2]</a></sup>，但不自带 d3<sup><a href="#ref3">[3]</a></sup>——包装函数的签名是 <code>(exports, d3)</code>，得先有全局d3才能跑。所以两个文件都要有，我把它们下载到 <code>vendor/</code> 自托管，不用 CDN：少一个外部依赖，也不怕哪天链接失效。</p>
+<p>画图交给 markmap<sup><a href="#ref1">[1]</a></sup>。它的浏览器版是一个 IIFE，导出到全局 <code>window.markmap</code><sup><a href="#ref2">[2]</a></sup>，但不自带 d3<sup><a href="#ref3">[3]</a></sup>——包装函数的签名是 <code>(exports, d3)</code>，得先有全局d3才能跑。所以两个文件都要有，我把它们下载到 <code>assets/vendor/</code> 自托管，不用 CDN：少一个外部依赖，也不怕哪天链接失效。</p>
 
 <pre><code>function loadScript(src) {
   return new Promise(function (resolve, reject) {
@@ -80,9 +80,9 @@
 
 function loadLibs() {
   if (!libs) {
-    libs = loadScript(base + 'vendor/d3.min.js')
+    libs = loadScript(base + 'd3.min.js')
       .then(function () {
-        return loadScript(base + 'vendor/markmap-view.min.js');
+        return loadScript(base + 'markmap-view.min.js');
       });
   }
   return libs;
@@ -149,12 +149,12 @@ mm.setData(tree).then(function () { mm.fit(); });</code></pre>
 <tr><th>文件</th><th>作用</th></tr>
 </thead>
 <tbody>
-<tr><td><code>mindmap.js</code></td><td>读取 <code>.mm</code> 并渲染，滚进视野才动手，约 210 行，无框架</td></tr>
-<tr><td><code>vendor/d3.min.js</code></td><td>自托管依赖，d3 v7.9.0</td></tr>
-<tr><td><code>vendor/markmap-view.min.js</code></td><td>自托管依赖，markmap-view 0.18.12</td></tr>
+<tr><td><code>assets/js/mindmap.js</code></td><td>读取 <code>.mm</code> 并渲染，滚进视野才动手，约 210 行，无框架</td></tr>
+<tr><td><code>assets/vendor/d3.min.js</code></td><td>自托管依赖，d3 v7.9.0</td></tr>
+<tr><td><code>assets/vendor/markmap-view.min.js</code></td><td>自托管依赖，markmap-view 0.18.12</td></tr>
 <tr><td><code>mindmaps/**/*.mm</code></td><td>FreeMind 源文件；可以再分目录，例如 <code>mindmaps/中外历史纲要上/&lt;单元&gt;/第01课 ….mm</code></td></tr>
-<tr><td><code>side-toc.js</code></td><td>从正文的 <code>&lt;details&gt;</code>、<code>&lt;h3&gt;</code> 生成侧边目录，约 190 行，可选；目前只有历史笔记那页用</td></tr>
-<tr><td><code>paper.css</code></td><td>导图容器的尺寸、上面那组 CSS 变量，以及侧边目录的样式</td></tr>
+<tr><td><code>assets/js/side-toc.js</code></td><td>从正文的 <code>&lt;details&gt;</code>、<code>&lt;h3&gt;</code> 生成侧边目录，约 190 行，可选；目前只有历史笔记那页用</td></tr>
+<tr><td><code>assets/css/paper.css</code></td><td>导图容器的尺寸、上面那组 CSS 变量，以及侧边目录的样式</td></tr>
 </tbody>
 </table>
 
@@ -163,7 +163,7 @@ mm.setData(tree).then(function () { mm.fit(); });</code></pre>
 <p>在 FreeMind 里画完存成 <code>.mm</code>，丢进 <code>mindmaps/</code>，文章里写两行：</p>
 
 <pre><code>&lt;div class="mindmap" data-src="/mindmaps/xxx.mm"&gt;&lt;/div&gt;
-&lt;script src="/mindmap.js" defer&gt;&lt;/script&gt;</code></pre>
+&lt;script src="/assets/js/mindmap.js" defer&gt;&lt;/script&gt;</code></pre>
 
 <p>一个页面可以放多张，每个 <code>div</code> 写自己的 <code>data-src</code>。没有导图的文章第二行可以不写。</p>
 
@@ -193,6 +193,6 @@ mm.setData(tree).then(function () { mm.fit(); });</code></pre>
 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a></p>
 </footer>
 </article>
-<script src="/mindmap.js" defer></script>
+<script src="/assets/js/mindmap.js" defer></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 /* mindmap.js — 把 FreeMind 的 .mm 渲染成导图
    <div class="mindmap" data-src="/mindmaps/x.mm"></div>
-   <script src="/mindmap.js" defer></script>
+   <script src="/assets/js/mindmap.js" defer></script>
    d3 与 markmap-view 只在页面出现导图、且导图滚到眼前时才加载 */
 
 (function () {
@@ -9,10 +9,11 @@
   var containers = document.querySelectorAll('.mindmap[data-src]');
   if (!containers.length) return;
 
-  // vendor/ 以本文件位置为基准
-  var base = (document.currentScript && document.currentScript.src)
-    ? document.currentScript.src.replace(/[^/]*$/, '')
-    : '/';
+  // d3 / markmap-view 在 assets/vendor/，以本文件（assets/js/mindmap.js）位置为基准
+  var base = '/assets/vendor/';
+  if (document.currentScript && document.currentScript.src) {
+    try { base = new URL('../vendor/', document.currentScript.src).href; } catch (e) { /* 保持默认 */ }
+  }
 
   function loadScript(src) {
     return new Promise(function (resolve, reject) {
@@ -27,8 +28,8 @@
   var libs = null;
   function loadLibs() {
     if (!libs) {
-      libs = loadScript(base + 'vendor/d3.min.js')
-        .then(function () { return loadScript(base + 'vendor/markmap-view.min.js'); });
+      libs = loadScript(base + 'd3.min.js')
+        .then(function () { return loadScript(base + 'markmap-view.min.js'); });
     }
     return libs;
   }

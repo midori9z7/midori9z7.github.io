@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>思维导图渲染试验 - Shiragashi</title>
-<link rel="stylesheet" href="/paper.css">
+<link rel="stylesheet" href="/assets/css/paper.css">
 </head>
 <body>
 <article class="paper">
@@ -25,7 +25,7 @@
   <p>文章里只要两行：</p>
 
   <pre><code>&lt;div class="mindmap" data-src="/mindmaps/xxx.mm"&gt;&lt;/div&gt;
-&lt;script src="/mindmap.js" defer&gt;&lt;/script&gt;</code></pre>
+&lt;script src="/assets/js/mindmap.js" defer&gt;&lt;/script&gt;</code></pre>
 
   <p>一个页面可以放多张，每个 <code>div</code> 写自己的 <code>data-src</code> 就行。
   只有真的出现导图的页面才会去加载 d3 和 markmap（约 300 KB），其他页面不受影响。</p>
@@ -49,7 +49,7 @@
   </table>
 
   <p>另外：<code>.mm</code> 必须通过 http(s) 访问，本地双击 HTML 打不开（和
-  <code>/paper.css</code> 一样的限制）。渲染失败时页面上会留一个
+  <code>/assets/css/paper.css</code> 一样的限制）。渲染失败时页面上会留一个
   「下载 .mm 源文件」的链接兜底。</p>
 
   <footer class="colophon">
@@ -59,6 +59,6 @@
   </footer>
 
 </article>
-<script src="/mindmap.js" defer></script>
+<script src="/assets/js/mindmap.js" defer></script>
 </body>
 </html>
