@@ -1,4 +1,4 @@
-# midori9z7.github.io
+# shiragashi.github.io
 
 My personal blog.
 
