@@ -1,5 +1,7 @@
 body {
-  font-family: system-ui, -apple-system, Roboto, "Segoe UI", sans-serif;
+  /* 与首页、文章页一致：英文 Palatino，中文用系统默认衬线 */
+  font-family: "Palatino Linotype", Palatino, "Iowan Old Style", "Book Antiqua", Georgia,
+               "Times New Roman", serif;
 }
 .post {
   max-width: 72em;

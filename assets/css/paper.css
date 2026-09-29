@@ -11,6 +11,9 @@
   --mm-line: #9a9a96;
   --tint: #f5f4f1;
   --shadow: 0 1px 4px rgba(0, 0, 0, .12);
+  /* 正文衬线：英文走 Palatino，中文交给系统默认衬线（宋体） */
+  --serif: "Palatino Linotype", Palatino, "Iowan Old Style", "Book Antiqua", Georgia,
+           "Times New Roman", serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -44,6 +47,7 @@ body {
   padding: 3.5rem 3rem 4.5rem;
   background-color: var(--paper);
   color: var(--ink);
+  font-family: var(--serif);
   font-size: 16px;
   line-height: 1.85;
 }
@@ -216,9 +220,12 @@ hr {
   height: auto;
 }
 
-/* 字体用浏览器默认；多加 .mindmap 前缀，否则会被 markmap 内联的 .markmap 规则盖掉 */
+/* 导图文字用无衬线（中文 微软雅黑 / 系统默认），与正文的衬线区分开；
+   markmap 的 --markmap-font 走 font 简写，必须写全 size/line-height；
+   多加 .mindmap 前缀，否则会被 markmap 内联的 .markmap 规则盖掉 */
 .mindmap .markmap {
-  --markmap-font: inherit;
+  --markmap-font: 300 16px/20px system-ui, -apple-system, "Segoe UI", Roboto,
+                  "Helvetica Neue", Arial, "Microsoft YaHei", "微软雅黑", sans-serif;
   --markmap-text-color: var(--ink);
   --markmap-circle-open-bg: var(--paper);
   --markmap-a-color: var(--accent);
