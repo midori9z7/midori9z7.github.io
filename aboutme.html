@@ -1,137 +1,219 @@
 <!doctype html>
-<html lang="en">
-<head>
-<meta content="text/html; charset=UTF-8" http-equiv="content-type">
-<title>Aboutme@shiragashi</title>
+<html lang="zh-CN" data-page-node-id="LNwJzNXTC09A2tXdketEyT">
+<head data-page-node-id="XOHQcTBdhZUq9Fk9qVK613">
+<meta charset="utf-8" data-page-node-id="okB7T6UbFFPFjntEBppJW2">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="vh6yYwbkylJTJscStBBvGn">
+<title>About me · Shiragashi</title>
 <style type="text/css">
-p { margin:0; color:#000000; font-size:11pt; font-family:"Arial" }
-li { color:#000000; font-size:11pt; font-family:"Arial" }
-ol { margin:0; padding:0 }
-h1 { padding-top:24pt; color:#000; font-weight:700; font-size:18pt; padding-bottom:6pt; font-family:"Arial"; line-height:1.15; text-align:left; margin:0 }
-h2 { padding-top:18pt; color:#000; font-weight:700; font-size:14pt; padding-bottom:4pt; font-family:"Arial"; line-height:1.15; text-align:left; margin:0 }
-h3 { padding-top:14pt; color:#666; font-weight:700; font-size:12pt; padding-bottom:4pt; font-family:"Arial"; line-height:1.15; text-align:left; margin:0 }
-.c0 { font-size:12pt; font-weight:400; font-family:"Times New Roman" }
-.c1 { color:inherit; text-decoration:inherit }
-.c3 { margin-left:36pt; padding-top:0pt; padding-bottom:0pt; line-height:1.15; padding-left:0pt; text-align:left }
-.c4 { padding-top:18pt; padding-bottom:4pt; line-height:1.15; text-align:center }
-.c5 { border-right-style:solid; padding:5pt 5pt 5pt 5pt; border-bottom-color:#ffffff; border-top-width:1pt; border-right-width:1pt; border-left-color:#ffffff; vertical-align:top; border-right-color:#ffffff; border-left-width:1pt; border-top-style:solid; border-left-style:solid; border-bottom-width:1pt; width:234pt; border-top-color:#ffffff; border-bottom-style:solid }
-.c6 { color:#1155cc; text-decoration:underline }
-.c7 { padding-top:0pt; padding-bottom:0pt; line-height:1.0; text-align:left; height:11pt }
-.c8 { font-weight:700; font-size:12pt; font-family:"Times New Roman" }
-.c9 { font-size:18pt }
-.c10 { color:#000000; font-weight:400; text-decoration:none; vertical-align:baseline; font-size:11pt; font-family:"Arial"; font-style:normal }
-.c11 { padding-top:0pt; padding-bottom:0pt; line-height:1.15; text-align:left; height:11pt }
-.c12 { font-size:12pt; font-weight:700 }
-.c13 { vertical-align:baseline; font-style:normal }
-.c14 { background-color:#ffffff; max-width:468pt; padding:72pt 72pt 72pt 72pt }
-.c15 { color:#000000; font-weight:700; text-decoration:none; font-size:11pt; font-family:"Arial" }
-.c16 { padding-top:0pt; padding-bottom:0pt; line-height:1.15; text-align:left }
-.c17 { padding-top:0pt; padding-bottom:0pt; line-height:1.15; text-align:right }
-.c20 { color:#000000; text-decoration:none }
-.c21 { padding-top:0pt; padding-bottom:0pt; line-height:1.0; text-align:left }
-.c22 { padding:0; margin:0 }
-.c24 { border-spacing:0; border-collapse:collapse; margin-right:auto }
-.c25 { padding-top:14pt; padding-bottom:4pt; line-height:1.15; text-align:center; height:12pt }
-.c26 { height:0pt }
-.c28 { border-right-style:solid; padding:5pt 5pt 5pt 5pt; border-bottom-color:#ffffff; border-top-width:1pt; border-right-width:1pt; border-left-color:#ffffff; vertical-align:top; border-right-color:#ffffff; border-left-width:1pt; border-top-style:solid; border-left-style:solid; border-bottom-width:1pt; width:156pt; border-top-color:#ffffff; border-bottom-style:solid }
-.c31 { padding-top:0pt; padding-bottom:0pt; line-height:1.15; text-align:center }
-.dark { display: none; }
-li.li-bullet-0:before { margin-left:-18pt; white-space:nowrap; display:inline-block; min-width:18pt }
-ul.lst-kix_ttatbm9hlkhi-0 { list-style-type:none }
-.lst-kix_ttatbm9hlkhi-0>li:before { content:"\0025cf   " }
+/* 保持原 Google Docs 导出的视觉样式：Arial 正文 + Times New Roman 引文/列表，
+   白底黑字，蓝链接，深浅色跟随系统。这里只做语义化重写，外观不变。 */
+:root {
+  color-scheme: light dark;
+  --sans: Arial, Helvetica, sans-serif;
+  --serif: "Times New Roman", Times, Georgia, serif;
+  --bg: #ffffff;
+  --ink: #000000;
+  --link: #1155cc;
+}
 @media (prefers-color-scheme: dark) {
-  body { background-color: #000000; }
-  .c14 { background-color: #000000; }
-  p, li, h1, h2, h3, .c10, .c15, .c20 { color: #e0e0e0; }
-  .c6 { color: #89a6ff; }
-  .c5, .c28 { border-top-color: #000000; border-bottom-color: #000000; border-left-color: #000000; border-right-color: #000000; }
-  .dark { display: block; }
-  .light { display: none; }
+  :root {
+    --bg: #000000;
+    --ink: #e0e0e0;
+    --link: #89a6ff;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 11pt;
+  line-height: 1.15;
+}
+
+.wrap {
+  max-width: 624px;   /* 原 468pt */
+  margin: 0 auto;
+  padding: 96px;      /* 原 72pt */
+}
+
+a { color: var(--link); }
+
+/* ---------- 顶部三栏：左外链 / 头像姓名 / 右站内链 ---------- */
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  align-items: start;
+}
+.header .center { text-align: center; }
+.header .right  { text-align: right; }
+.header nav a {
+  display: block;
+  font-size: 12pt;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: underline;
+}
+.header nav a.plain {   /* 右侧次要项：Home/Blog posts 之外用常规字重 */
+  font-size: 11pt;
+  font-weight: 400;
+}
+.avatar {
+  display: inline-block;
+  width: 192px;
+  height: 192px;
+  object-fit: cover;
+}
+.avatar.dark { display: none; }
+@media (prefers-color-scheme: dark) {
+  .avatar.dark { display: inline-block; }
+  .avatar.light { display: none; }
+}
+.name {
+  margin: 0;
+  font-size: 18pt;
+  font-weight: 700;
+}
+
+/* ---------- 区块 ---------- */
+section { margin-top: 2.4em; }
+
+/* ---------- 圆点列表（引文与链接共用，衬线体） ---------- */
+ul.points {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: var(--serif);
+  font-size: 12pt;
+}
+ul.points li {
+  margin-left: 36pt;
+  margin-bottom: 0.4em;
+  line-height: 1.5;
+}
+ul.points li::before {
+  content: "\25cf";   /* 原 Google Docs 用的实心大圆点 ● */
+  display: inline-block;
+  min-width: 18pt;
+  margin-left: -18pt;
+}
+
+.links-title {
+  margin: 0 0 1em;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* ---------- 链接四宫格 ---------- */
+.links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 32px;
+}
+.links h2 {
+  margin: 0 0 0.5em;
+  font-family: var(--serif);
+  font-size: 12pt;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+/* ---------- 窄屏降级 ---------- */
+@media (max-width: 560px) {
+  .wrap { padding: 24px 20px; }
+  .header {
+    grid-template-columns: 1fr;
+    gap: 1.6em;
+    text-align: center;
+  }
+  .header .right { text-align: center; }
+  ul.points li { margin-left: 18pt; }
+  .links { grid-template-columns: 1fr; }
 }
 </style>
 </head>
-<body class="c14">
-<h3 class="c25"><span class="c10"></span></h3>
-<table class="c24">
-<tr class="c26">
-<td class="c28">
-<p class="c21"><span class="c6 c12"><a class="c1" href="https://steamcommunity.com/id/m7sm7sm7s/">Steam</a></span></p>
-<p class="c21"><span class="c6 c12"><a class="c1" href="mailto:wailingrains&#64;qq.com">Email</a></span></p>
-<p class="c21"><span class="c6 c12"><a class="c1" href="https://space.bilibili.com/3546736595306856">Bilibili</a></span></p>
-<p class="c21"><span class="c6 c12"><a class="c1" href="https://github.com/midori9z7">GitHub</a></span></p>
-<p class="c21"><span class="c6 c12"><a class="c1" href="https://hsyc.pte.sh.cn">School</a></span></p>
-<p class="c7"><span class="c10"></span></p>
-<p class="c7"><span class="c10"></span></p>
-<p class="c7"><span class="c10"></span></p>
-</td>
-<td class="c28">
-<p class="c21"><span style="overflow: hidden; display: inline-block; margin: 0; border: 0 solid #000; width: 192px; height: 192px;"><img alt="bright photo" class="light" src="/assets/img/shiina 2.jpg" style="width: 192px; height: 192px; object-fit: cover;"><img alt="dark photo" class="dark" src="/assets/img/Shiina 1.jpg" style="width: 192px; height: 192px; object-fit: cover;"></span></p>
-<h2 class="c4"><span class="c9">鹭@shiragashi</span></h2>
-</td>
-<td class="c28">
-<p class="c17"><span class="c6 c12"><a class="c1" href="/index.html">Home</a></span></p>
-<p class="c17"><span class="c6 c12"><a class="c1" href="/index.html">Blog posts</a></span></p>
-<p class="c17"><span class="c6"><a class="c1" href="/index.html">Notes</a></span></p>
-<p class="c17"><span class="c6"><a class="c1" href="https://www.douban.com/people/294604495">douban</a></span></p>
-<p class="c21"><span class="c6 c12"></p>
-<p class="c7"><span class="c10"></span></p>
-</td>
-</tr>
-</table>
-<p class="c11"><span class="c10"></span></p>
-<ul class="c22 lst-kix_ttatbm9hlkhi-0 start">
-<li class="c3 li-bullet-0"><span class="c0">"Until death do us part."</span></li>
-<li class="c3 li-bullet-0"><span class="c0">Dreams narcotize the shape of my arms, Centuries waiting for your glimpse to me. Shall we write or just never start? (Please let the lancet pierce my broken heart.)</span></li>
-<li class="c3 li-bullet-0"><span class="c0">The works are under </span><span class="c6 c0"><a class="c1" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a></span><span class="c0">.</span></li>
-</ul>
-<p class="c11"><span class="c10"></span></p>
-<p class="c31"><span class="c13 c15">Links</span></p>
-<p class="c11"><span class="c10"></span></p>
-<table class="c24">
-<tr class="c26">
-<td class="c5">
-<p class="c16"><span class="c6 c8"><a class="c1" href="/index.html">Blog Posts</a></span></p>
-<ul class="c22 lst-kix_ttatbm9hlkhi-0 start">
-<li class="c3 li-bullet-0"><span class="c6 c0"><a class="c1" href="/posts/blog_posts/让博客直接渲染 FreeMind 思维导图.html">让博客直接渲染 FreeMind 思维导图</a></span></li>
-<li class="c3 li-bullet-0"><span class="c6 c0"><a class="c1" href="/posts/blog_posts/无休的彩盘和致幻剂.html">无休的彩盘和致幻剂</a></span></li>
-<li class="c3 li-bullet-0"><span class="c6 c0"><a class="c1" href="/posts/blog_posts/A game desert that endlessly expands(edited 0829).html">A game desert that endlessly expands(edited 0829)</a></span></li>
-<li class="c3 li-bullet-0"><span class="c6 c0"><a class="c1" href="/posts/blog_posts/The dead past, the helpless present, the psychedelic future.html">The dead past, the helpless present, the psychedelic future</a></span></li>
-</ul>
-<p class="c7"><span class="c10"></span></p>
-</td>
-<td class="c5">
-<p class="c16"><span class="c8 c20 c13">Politics &amp; Political Philosophy</span></p>
-<ul class="c22 lst-kix_ttatbm9hlkhi-0 start">
-<li class="c3 li-bullet-0"><span class="c6 c0"><a class="c1" href="/posts/politics/七律.html">七律</a></span></li>
-<li class="c3 li-bullet-0"><span class="c6 c0"><a class="c1" href="/posts/politics/1.html">still working...</a></span></li>
-<li class="c3 li-bullet-0"><span class="c6 c0"><a class="c1" href="/posts/political-philosophy/1.html">still working...</a></span></li>
-<li class="c3 li-bullet-0"><span class="c6 c0"><a class="c1" href="/posts/political-philosophy/2.html">still working...</a></span></li>
+<body data-page-node-id="D2VC9v9XDY55nLRWll6Da6">
+<div class="wrap" data-page-node-id="Qyqm0QNITppXFkVoVNH3BL">
 
-</ul>
-<p class="c7"><span class="c10"></span></p>
-</td>
-</tr>
-<tr class="c26">
-<td class="c5">
-<p class="c16"><span class="c8 c20 c13">Notes</span></p>
-<ul class="c22 lst-kix_ttatbm9hlkhi-0 start">
-<li class="c3 li-bullet-0"><span class="c6 c0"><a class="c1" href="/posts/notes/1.html">still working...</a></span></li>
-</ul>
-<p class="c7"><span class="c10"></span></p>
-</td>
-<td class="c5">
-<p class="c16"><span class="c8 c20 c13">Poems</span></p>
-<ul class="c22 lst-kix_ttatbm9hlkhi-0 start">
-<li class="c3 li-bullet-0"><span class="c6 c0"><a class="c1" href="/posts/poems/诗词.html">诗词练习</a></span></li>
-<li class="c3 li-bullet-0"><span class="c6 c0"><a class="c1" href="/posts/poems/2026/">2026</a></span></li>
-<li class="c3 li-bullet-0"><span class="c6 c0"><a class="c1" href="/posts/poems/2025/">2025</a></span></li>
-<li class="c3 li-bullet-0"><span class="c6 c0"><a class="c1" href="/posts/poems/2024/">2024</a></span></li>
-</ul>
-<p class="c7"><span class="c10"></span></p>
-</td>
-</tr>
-</table>
-<p class="c11"><span class="c10"></span></p>
-<p class="c11"><span class="c10"></span></p>
+  <header class="header" data-page-node-id="OfEqXkT7oUPjmDm9ImjSD8">
+    <nav class="left" aria-label="外部链接" data-page-node-id="dHAuljCJkGFDCm3nD0BCzZ">
+      <a href="https://steamcommunity.com/id/m7sm7sm7s/" data-page-node-id="qubQn2EPXeKq03y5px76i3">Steam</a>
+      <a href="mailto:wailingrains@qq.com" data-page-node-id="Q08CfUwFWTTOHu73DRu20p">Email</a>
+      <a href="https://space.bilibili.com/3546736595306856" data-page-node-id="lLGkepxgqT1YJnlbWFeehj">Bilibili</a>
+      <a href="https://github.com/midori9z7" data-page-node-id="gjAAdRJodZy0uYkmpELx3m">GitHub</a>
+      <a href="https://hsyc.pte.sh.cn" data-page-node-id="TfWsbSPJwCMfpBJXFK1NUS">School</a>
+    </nav>
+
+    <div class="center" data-page-node-id="kDIOwr5CVaP1NVK7oGKIps">
+      <img class="avatar light" alt="bright photo" src="/assets/img/shiina 2.jpg" data-page-node-id="P3XsvSG7f7SvkrPXSaFLor">
+      <img class="avatar dark" alt="dark photo" src="/assets/img/Shiina 1.jpg" data-page-node-id="FspvbbBt4ErLHMc2h9DIC8">
+      <h1 class="name" data-page-node-id="JviTbxmE49t7hyCR2d0Uri">鹭@shiragashi</h1>
+    </div>
+
+    <nav class="right" aria-label="站内链接" data-page-node-id="iHJEl3XesneTLO5ifqLcW9">
+      <a href="/index.html" data-page-node-id="Sq4U8bKdtecgV0GFsi3WPm">Home</a>
+      <a href="/index.html" data-page-node-id="a44gWRlEOcZkT8AmFlhp1u">Blog posts</a>
+      <a class="plain" href="/index.html" data-page-node-id="JIQQ981C5sarzAZwSZPhxp">Notes</a>
+      <a class="plain" href="https://www.douban.com/people/294604495" data-page-node-id="1qqRDvWTZwQPZke89Vdh3U">douban</a>
+    </nav>
+  </header>
+
+  <section data-page-node-id="sph5W7LtP7aqOW18LSxzbC">
+    <ul class="points" data-page-node-id="h2eCldoP2g9oivBZgWvhVN">
+      <li data-page-node-id="KUwHnknByJNczRkKq5iDsb">"Until death do us part."</li>
+      <li data-page-node-id="Zan73lB8qupEFyiwBCnIqn">"Dreams narcotize the shape of my arms, Centuries waiting for your glimpse to me. Shall we write or just never start? (Please let the lancet pierce my broken heart.)"</li>
+      <li data-page-node-id="11eBUceoogEFBrl3g2Pcoy">The works are under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" data-page-node-id="9xGgASSjpgFDlPsrT3SRZN">CC BY-NC-ND 4.0</a>.</li>
+    </ul>
+  </section>
+
+  <section data-page-node-id="LPbcAXQQ2L4EtceJJRHv4F">
+    <p class="links-title" data-page-node-id="NgERaOwwNVWuGo9zu1zGF9">Links</p>
+    <div class="links" data-page-node-id="BbJOBlP3WwOW4p096hX5Bp">
+
+      <div data-page-node-id="pprBgluIZXnuAjCMoKlAcc">
+        <h2 data-page-node-id="gsY8IhwvmnSHjuARBFzttd"><a href="/index.html" data-page-node-id="ZBAL3dxSkJiql9EZaYznsK">Blog Posts</a></h2>
+        <ul class="points" data-page-node-id="XQe8OTy54XRHqNuNctdvQt">
+          <li data-page-node-id="IqHCHHPpaJBXGLiPW4thS0"><a href="/posts/blog_posts/让博客直接渲染 FreeMind 思维导图.html" data-page-node-id="tFETTtMOpX4V240iV0U4Qn">让博客直接渲染 FreeMind 思维导图</a></li>
+          <li data-page-node-id="DGfEoBx6S7PM9yuShCe7ll"><a href="/posts/blog_posts/无休的彩盘和致幻剂.html" data-page-node-id="nnWsInCY4qQ5rYiBipgK3I">无休的彩盘和致幻剂</a></li>
+          <li data-page-node-id="y4PgHqkGtQZE8cQWbynH8R"><a href="/posts/blog_posts/A game desert that endlessly expands(edited 0829).html" data-page-node-id="5nKF3f9kZO4qyck2EfoYqG">A game desert that endlessly expands(edited 0829)</a></li>
+          <li data-page-node-id="FN0HZD2YGOiB8FLFFOa05C"><a href="/posts/blog_posts/The dead past, the helpless present, the psychedelic future.html" data-page-node-id="5TSGpFEAAboqf2a3Mgej5N">The dead past, the helpless present, the psychedelic future</a></li>
+        </ul>
+      </div>
+
+      <div data-page-node-id="4PI3FGbOGH0I4fAbG0gD6w">
+        <h2 data-page-node-id="VPH6LudyvCtXELQVfJ1AO1">Politics &amp; Political Philosophy</h2>
+        <ul class="points" data-page-node-id="7rjMPblnpdZS1Q3NTVKWYu">
+          <li data-page-node-id="fwUFmYOG10u4Qrax0uX4vg"><a href="/posts/politics/七律.html" data-page-node-id="5bdLTxrsFqKSnCOYPWm1yT">七律</a></li>
+          <li data-page-node-id="DfoVeewT9SCKePHyySTrwB"><a href="/posts/politics/1.html" data-page-node-id="A1cmpEkbQfkS4HnNAENNzH">still working...</a></li>
+          <li data-page-node-id="SCRZ7Z3EGe2q3nH9fjwcLT"><a href="/posts/political-philosophy/1.html" data-page-node-id="1zMq2xD1A3K4jUxaBhnbS5">still working...</a></li>
+          <li data-page-node-id="1xP5XJaEVkVDTP6NZUsghJ"><a href="/posts/political-philosophy/2.html" data-page-node-id="PY9dA5aJuBAupSrgqyYfDo">still working...</a></li>
+        </ul>
+      </div>
+
+      <div data-page-node-id="EeNS4WFe9ZeDQtUsUijsy4">
+        <h2 data-page-node-id="jeVggXcqIIML3BOiTvrrv9">Notes</h2>
+        <ul class="points" data-page-node-id="ZSkPA8EqQfGZK9w9HCbbmH">
+          <li data-page-node-id="yCXpvAQAREScFXH92dwKtJ"><a href="/posts/notes/1.html" data-page-node-id="y7TOiHCTFji5HOtYpoKARv">still working...</a></li>
+        </ul>
+      </div>
+
+      <div data-page-node-id="tXvSc1zKmnsR860NAclEVE">
+        <h2 data-page-node-id="nvzZyVbNpvlrewvEAx927H">Poems</h2>
+        <ul class="points" data-page-node-id="e1mIN4AjHvHlaj4b2mvEyV">
+          <li data-page-node-id="cGQnuylVAMqxyBknE7r78W"><a href="/posts/poems/诗词.html" data-page-node-id="EhMRzCSwWGkGn4PcCxuRBL">诗词练习</a></li>
+          <li data-page-node-id="n5WWgLAojvpuh9KMWwXHSP"><a href="/posts/poems/2026/" data-page-node-id="KpfvfRWWPCOlqeLxqcAh77">2026</a></li>
+          <li data-page-node-id="rPFj7y34EGJbXZWOI7XUzt"><a href="/posts/poems/2025/" data-page-node-id="iAx8AQva1EdGLzztvgXxml">2025</a></li>
+          <li data-page-node-id="OTwxYzjY9V6b8DRQHBrLh8"><a href="/posts/poems/2024/" data-page-node-id="EMQK9jvSF5Wo9H630TvgC6">2024</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+</div>
 </body>
 </html>

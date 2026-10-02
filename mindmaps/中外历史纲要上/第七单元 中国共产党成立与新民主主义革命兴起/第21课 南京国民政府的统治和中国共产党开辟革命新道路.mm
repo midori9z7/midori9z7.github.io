@@ -1,7 +1,29 @@
 <map version="1.0.1">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node TEXT="&#x7b2c;21&#x8bfe; &#x5357;&#x4eac;&#x56fd;&#x6c11;&#x653f;&#x5e9c;&#x7684;&#x7edf;&#x6cbb;&#x548c;&#x4e2d;&#x56fd;&#x5171;&#x4ea7;&#x515a;&#x5f00;&#x8f9f;&#x9769;&#x547d;&#x65b0;&#x9053;&#x8def;">
+<node TEXT="第21课 南京国民政府的统治和中国共产党开辟革命新道路">
 <font NAME="SansSerif" SIZE="12"/>
-<node TEXT="&#x5f85;&#x8865;&#x5145;"/>
+  <node POSITION="right" TEXT="南京国民政府的统治">
+    <node TEXT="建立 1927年——蒋介石南京国民政府·宁汉合流·专制统治"/>
+    <node TEXT="训政——一党专制·大地主大资产阶级利益"/>
+    <node TEXT="经济——国民经济建设运动·官僚资本膨胀·挤压民族资本"/>
+    <node TEXT="军事——多次「围剿」革命根据地"/>
+  </node>
+  <node POSITION="right" TEXT="开辟革命新道路">
+    <node TEXT="南昌起义 1927年8月1日——打响武装反抗第一枪"/>
+    <node TEXT="八七会议 1927年8月——土地革命和武装反抗总方针"/>
+    <node TEXT="秋收起义 1927年9月——毛泽东领导"/>
+    <node TEXT="井冈山根据地 1927年10月">
+      <node TEXT="农村包围城市·武装夺取政权"/>
+      <node TEXT="工农武装割据——土地革命·武装斗争·根据地建设"/>
+    </node>
+    <node TEXT="土地革命——打土豪·分田地·赢得农民支持"/>
+    <node TEXT="古田会议 1929年——思想建党·政治建军"/>
+    <node TEXT="中华苏维埃共和国 1931年——瑞金·临时中央政府"/>
+  </node>
+  <node POSITION="right" TEXT="红军长征">
+    <node TEXT="起因——第五次反「围剿」失利 1934年"/>
+    <node TEXT="遵义会议 1935年1月——生死攸关的转折点·确立毛泽东领导"/>
+    <node TEXT="胜利 1936年——会宁会师·长征精神"/>
+  </node>
 </node>
 </map>
