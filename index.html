@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,39 +7,27 @@
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
     <style type="text/css">
-/*
-  照抄 apple.com 官网结构：全宽连续横幅、纯色大区块（白 / 黑 / 浅灰交替）、
-  超大标题 + 细 eyebrow + 蓝色 "›" 链接；只用黑、白、灰与链接蓝。
-  - 系统字体栈（SF Pro / 苹方优先），大标题紧字距
-  - 磨砂吸顶导航（44px）、列表无分割线、深浅色自适应
-  - 动效照苹果官网：滚动联动浮现 + Hero 视差淡出 + 链接箭头位移
-*/
+
 :root {
   color-scheme: light dark;
   --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
           "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
           "Segoe UI", sans-serif;
   --bg: #ffffff;
-  --band: #f5f5f7;
   --ink: #1d1d1f;
   --ink2: #6e6e73;
-  --link: #0066cc;
+  --link: #00ff00;
   --hairline: rgba(0, 0, 0, 0.14);
   --nav-bg: rgba(255, 255, 255, 0.72);
-  --feature-bg: #000000;
-  --feature-sub: #a1a1a6;
-  --feature-link: #2997ff;
 }
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #000000;
-    --band: #161617;
     --ink: #f5f5f7;
     --ink2: #86868b;
-    --link: #2997ff;
+    --link: #00ff00;
     --hairline: rgba(255, 255, 255, 0.18);
     --nav-bg: rgba(22, 22, 23, 0.8);
-    --feature-bg: #161617;
   }
 }
 
@@ -107,19 +95,17 @@ body {
 section { text-align: center; }
 .eyebrow {
   margin: 0 0 10px;
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
   color: var(--ink2);
 }
-h1, h2 { margin: 0; font-weight: 700; letter-spacing: -0.02em; }
+h1, h2 { margin: 0; font-weight: 600; letter-spacing: -0.015em; }
 .subhead {
   margin: 14px 0 0;
-  font-size: clamp(19px, 2.4vw, 24px);
+  font-size: clamp(19px, 2vw, 21px);
   font-weight: 400;
   color: var(--ink2);
-  line-height: 1.4;
+  line-height: 1.38;
 }
 .links {
   display: flex;
@@ -166,39 +152,20 @@ img.profile {
   box-shadow: 0 0 0 1px var(--hairline), 0 8px 32px rgba(0, 0, 0, 0.12);
 }
 img.profile.dark { display: none; }
+@media (prefers-color-scheme: dark) {
+  img.profile.dark { display: block; }
+  img.profile.light { display: none; }
+}
 .hero h1 {
-  font-size: clamp(56px, 9vw, 96px);
-  line-height: 1.03;
+  font-size: clamp(40px, 6vw, 56px);
+  line-height: 1.07;
 }
 
-/* ---------- 最新文章（全宽纯黑横幅） ---------- */
-.banner {
-  background: var(--feature-bg);
-  color: #f5f5f7;
-  padding: clamp(72px, 10vw, 120px) 22px;
-}
-.banner .eyebrow { color: #86868b; }
-.banner h2 {
-  font-size: clamp(40px, 5.5vw, 60px);
-  line-height: 1.08;
-  max-width: 18em;
-  margin-left: auto;
-  margin-right: auto;
-}
-.banner h2 a {
-  color: #f5f5f7;
-  text-decoration: none;
-}
-.banner h2 a:hover { text-decoration: underline; text-underline-offset: 8px; }
-.banner .subhead { color: var(--feature-sub); }
-.banner .cta { color: var(--feature-link); font-size: 18px; }
-
-/* ---------- 内容区块（全宽横幅，白 / 浅灰交替） ---------- */
+/* ---------- 内容区块 ---------- */
 .section {
   padding: clamp(88px, 12vw, 140px) 22px;
   scroll-margin-top: 44px;
 }
-.section.band { background: var(--band); }
 .section-inner {
   max-width: 980px;
   margin: 0 auto;
@@ -206,8 +173,8 @@ img.profile.dark { display: none; }
 }
 .section .eyebrow, .section h2 { text-align: center; }
 .section h2 {
-  font-size: clamp(40px, 5vw, 56px);
-  line-height: 1.06;
+  font-size: clamp(36px, 5vw, 48px);
+  line-height: 1.1;
 }
 
 /* ---------- 搜索 ---------- */
@@ -310,19 +277,34 @@ li.wip a:hover { color: var(--ink2); }
 @media (min-width: 900px) { .cols { columns: 3; } }
 @media (max-width: 560px) { .cols { columns: 1; } }
 
-/* ---------- 页脚 ---------- */
+/* ---------- 页脚（苹果式多列，左对齐） ---------- */
 footer {
-  background: var(--band);
-  padding: 40px 22px 48px;
-  text-align: center;
+  padding: 20px 22px 32px;
   font-size: 12px;
-  line-height: 2;
   color: var(--ink2);
 }
-footer p { margin: 0; }
-footer a { color: var(--ink2); text-decoration: none; }
-footer a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
-.foot-dot { margin: 0 8px; }
+.footer-inner { max-width: 980px; margin: 0 auto; }
+.footer-cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 28px;
+  padding: 8px 0 24px;
+  border-bottom: 1px solid var(--hairline);
+}
+.fcol h4 {
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.fcol ul { list-style: none; margin: 0; padding: 0; }
+.fcol li { margin: 0 0 6px; }
+.fcol a { color: var(--ink2); text-decoration: none; }
+.fcol a:hover { color: var(--ink); text-decoration: underline; }
+.footer-bottom { padding-top: 18px; }
+.footer-bottom p { margin: 0 0 4px; }
+.footer-bottom a { color: var(--ink2); text-decoration: none; }
+.footer-bottom a:hover { text-decoration: underline; }
 
 /* 滚动浮现由 JS 按滚动位置实时驱动（opacity / translateY 内联设置） */
 @media (prefers-reduced-motion: reduce) {
@@ -333,13 +315,13 @@ footer a:hover { color: var(--ink); text-decoration: underline; text-underline-o
     </style>
   </head>
   <body>
-    <nav class="nav" aria-label="主导航">
+    <nav class="nav" aria-label="Main navigation">
       <div class="nav-inner">
         <a class="brand" href="#top">Shiragashi</a>
         <div class="nav-links">
-          <a href="#archive">文章</a>
-          <a href="#poems">诗</a>
-          <a href="/aboutme.html">关于</a>
+          <a href="#archive">Articles</a>
+          <a href="#poems">Poems</a>
+          <a href="/aboutme.html">About</a>
         </div>
       </div>
     </nav>
@@ -352,35 +334,25 @@ footer a:hover { color: var(--ink); text-decoration: underline; text-underline-o
         <h1>Shiragashi</h1>
         <p class="subhead">This blog is used as my tomb.</p>
         <p class="links">
-          <a class="cta" href="/aboutme.html">关于我<span class="chev">›</span></a>
+          <a class="cta" href="/aboutme.html">About me<span class="chev">›</span></a>
           <a class="cta" href="https://github.com/shiragashi">GitHub<span class="chev">›</span></a>
-        </p>
-      </section>
-
-      <section class="banner">
-        <p class="eyebrow">最新文章 · Latest</p>
-        <h2><a href="posts/blog_posts/让博客直接渲染 FreeMind 思维导图.html">让博客直接渲染 FreeMind 思维导图</a></h2>
-        <p class="subhead">2026.09.19</p>
-        <p class="links">
-          <a class="cta" href="posts/blog_posts/让博客直接渲染 FreeMind 思维导图.html">阅读全文<span class="chev">›</span></a>
-          <a class="cta" href="#archive">全部文章<span class="chev">›</span></a>
         </p>
       </section>
 
       <section class="section" id="archive">
         <div class="section-inner">
           <p class="eyebrow reveal">Archive</p>
-          <h2 class="reveal">文章</h2>
+          <h2 class="reveal">Articles</h2>
 
           <div class="search reveal">
             <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="6.5" cy="6.5" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="10.6" y1="10.6" x2="14.4" y2="14.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-            <input type="search" id="q" placeholder="搜索全部内容…" autocomplete="off" aria-label="搜索全部内容">
+            <input type="search" id="q" placeholder="Search all content…" autocomplete="off" aria-label="Search all content">
           </div>
-          <p class="no-results" id="no-results" hidden>没有找到相关内容。</p>
+          <p class="no-results" id="no-results" hidden>No results found.</p>
 
           <div class="cats">
             <div class="cat reveal">
-              <h3>博客</h3>
+              <h3>Blog</h3>
               <ul>
                 <li><a href="posts/blog_posts/让博客直接渲染 FreeMind 思维导图.html">让博客直接渲染 FreeMind 思维导图</a><span class="date">2026.09.19</span></li>
                 <li><a href="posts/blog_posts/A game desert that endlessly expands(edited 0829).html">A game desert that endlessly expands<span class="upd">edited 0829</span></a><span class="date">2026.07.27</span></li>
@@ -390,7 +362,7 @@ footer a:hover { color: var(--ink); text-decoration: underline; text-underline-o
             </div>
 
             <div class="cat reveal">
-              <h3>政治与政治哲学</h3>
+              <h3>Politics &amp; Political Philosophy</h3>
               <ul>
                 <li><a href="posts/politics/七律.html">七律</a></li>
                 <li class="wip"><a href="posts/politics/1.html">still working...</a></li>
@@ -400,14 +372,14 @@ footer a:hover { color: var(--ink); text-decoration: underline; text-underline-o
             </div>
 
             <div class="cat reveal">
-              <h3>笔记</h3>
+              <h3>Notes</h3>
               <ul>
                 <li class="wip"><a href="posts/notes/1.html">still working...</a></li>
               </ul>
             </div>
 
             <div class="cat reveal">
-              <h3>高中</h3>
+              <h3>High School</h3>
               <ul>
                 <li><a href="posts/notes/历史必修一.html">历史必修一思维导图</a></li>
               </ul>
@@ -419,12 +391,14 @@ footer a:hover { color: var(--ink); text-decoration: underline; text-underline-o
       <section class="section band" id="poems">
         <div class="section-inner">
           <p class="eyebrow reveal">Poems</p>
-          <h2 class="reveal">诗</h2>
+          <h2 class="reveal">Poems</h2>
 
           <div class="cats">
             <div class="cat wide reveal">
-              <h3>2026<span class="count">11 首</span></h3>
+              <h3>2026<span class="count">13 poems</span></h3>
               <ul class="cols">
+                <li><a href="posts/poems/2026/新月明.html">新月明</a></li>
+                <li><a href="posts/poems/2026/歌女与动物学家，关于音乐女神及一只猫的对话.html">歌女与动物学家，关于音乐女神及一只猫的对话</a></li>
                 <li><a href="posts/poems/2026/只有神翠鸟从爱欲的迷醉中被拽回了人间.html">只有神翠鸟从爱欲的迷醉中被拽回了人间</a></li>
                 <li><a href="posts/poems/2026/十二月四日，杜鹃的高烧退了.html">十二月四日，杜鹃的高烧退了</a></li>
                 <li><a href="posts/poems/2026/幻灵，第8号.html">幻灵，第8号</a></li>
@@ -440,7 +414,7 @@ footer a:hover { color: var(--ink); text-decoration: underline; text-underline-o
             </div>
 
             <div class="cat reveal">
-              <h3>2025<span class="count">4 首</span></h3>
+              <h3>2025<span class="count">4 poems</span></h3>
               <ul>
                 <li><a href="posts/poems/2025/登台病.html">登台病</a></li>
                 <li><a href="posts/poems/2025/涸辙之鲋与病变移植.html">涸辙之鲋与病变移植</a></li>
@@ -450,7 +424,7 @@ footer a:hover { color: var(--ink); text-decoration: underline; text-underline-o
             </div>
 
             <div class="cat reveal">
-              <h3>2024<span class="count">4 首</span></h3>
+              <h3>2024<span class="count">4 poems</span></h3>
               <ul>
                 <li><a href="posts/poems/2024/撕裂.html">撕裂</a></li>
                 <li><a href="posts/poems/2024/Untitled.html">Untitled</a></li>
@@ -460,7 +434,7 @@ footer a:hover { color: var(--ink); text-decoration: underline; text-underline-o
             </div>
 
             <div class="cat reveal">
-              <h3>诗词练习</h3>
+              <h3>Poetry Practice</h3>
               <ul>
                 <li><a href="posts/poems/诗词.html">诗词练习</a></li>
               </ul>
@@ -470,63 +444,45 @@ footer a:hover { color: var(--ink); text-decoration: underline; text-underline-o
       </section>
 
       <footer>
-        <p>
-          <a href="mailto:wailingrains&#64;qq.com">Email</a><span class="foot-dot">·</span>
-          <a href="https://github.com/shiragashi">GitHub</a><span class="foot-dot">·</span>
-          <a href="/aboutme.html">About me</a>
-        </p>
-        <p>
-          Code <a href="https://wtfpl.net/">WTFPL v2</a><span class="foot-dot">·</span>
-          Posts <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>
-        </p>
-        <p>© 2026 Shiragashi</p>
+        <div class="footer-inner">
+          <div class="footer-cols">
+            <div class="fcol">
+              <h4>Explore</h4>
+              <ul>
+                <li><a href="#archive">Blog Posts</a></li>
+                <li><a href="#poems">Poems</a></li>
+                <li><a href="#archive">Notes</a></li>
+                <li><a href="#archive">High School</a></li>
+              </ul>
+            </div>
+            <div class="fcol">
+              <h4>Poetry</h4>
+              <ul>
+                <li><a href="#poems">2026</a></li>
+                <li><a href="#poems">2025</a></li>
+                <li><a href="#poems">2024</a></li>
+                <li><a href="#poems">Practice</a></li>
+              </ul>
+            </div>
+            <div class="fcol">
+              <h4>Connect</h4>
+              <ul>
+                <li><a href="mailto:wailingrains&#64;qq.com">Email</a></li>
+                <li><a href="https://github.com/shiragashi">GitHub</a></li>
+                <li><a href="/aboutme.html">About me</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>Code <a href="https://wtfpl.net/">WTFPL v2</a> · Posts <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a></p>
+            <p>© 2026 Shiragashi</p>
+          </div>
+        </div>
       </footer>
 
     </div>
 
     <script>
-/* 苹果式滚动动效：Hero 视差淡出 + 分区滚动联动浮现（由滚动位置实时驱动）。 */
-(function () {
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var reveals = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
-  var hero = document.querySelector('.hero');
-  if (reduce) return;
-
-  var ticking = false;
-  function update() {
-    var vh = window.innerHeight || document.documentElement.clientHeight;
-    var y = window.scrollY || document.documentElement.scrollTop || 0;
-
-    if (hero) {
-      var f = Math.max(0, 1 - y / (vh * 0.85));
-      hero.style.opacity = String(f);
-      hero.style.transform = 'translateY(' + (y * 0.25).toFixed(2) + 'px)';
-      hero.style.pointerEvents = f < 0.05 ? 'none' : '';
-    }
-
-    var start = vh, end = vh * 0.88, range = start - end;
-    for (var i = 0; i < reveals.length; i++) {
-      var el = reveals[i];
-      if (el._done) continue;
-      var top = el.getBoundingClientRect().top;
-      var p = (start - top) / range;
-      p = p < 0 ? 0 : (p > 1 ? 1 : p);
-      if (p >= 1) { el._done = true; p = 1; }
-      el.style.opacity = String(p);
-      el.style.transform = 'translateY(' + ((1 - p) * 20).toFixed(2) + 'px)';
-    }
-    ticking = false;
-  }
-  function request() {
-    if (ticking) return;
-    ticking = true;
-    requestAnimationFrame(update);
-  }
-  window.addEventListener('scroll', request, { passive: true });
-  window.addEventListener('resize', request);
-  update();
-})();
-
 /* 搜索过滤：实时筛选所有条目，空分类/空分区自动隐藏 */
 (function () {
   var input = document.getElementById('q');
@@ -565,5 +521,6 @@ footer a:hover { color: var(--ink); text-decoration: underline; text-underline-o
   });
 })();
     </script>
+    <script src="/assets/js/reveal.js" defer></script>
   </body>
 </html>

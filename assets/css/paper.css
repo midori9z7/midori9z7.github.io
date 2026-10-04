@@ -1,32 +1,33 @@
 /* paper.css — 文章页排版（首页与 aboutme.html 仍用 style.css） */
 
 :root {
-  --ink: #1b1b1b;
-  --ink-soft: #5c5c5c;
-  --rule: #d9d7d2;
+  --ink: #1d1d1f;
+  --ink-soft: #6e6e73;
+  --rule: #d2d2d7;
   --paper: #ffffff;
-  --desk: #f2f1ee;
-  --accent: #7a1f1f;
-  --foot-link: #b3289f;
-  --mm-line: #9a9a96;
-  --tint: #f5f4f1;
-  --shadow: 0 1px 4px rgba(0, 0, 0, .12);
-  /* 正文衬线：英文走 Palatino，中文交给系统默认衬线（宋体） */
-  --serif: "Palatino Linotype", Palatino, "Iowan Old Style", "Book Antiqua", Georgia,
-           "Times New Roman", serif;
+  --desk: #ffffff;
+  --accent: #00ff00;
+  --foot-link: #00ff00;
+  --mm-line: #8e8e93;
+  --tint: #f5f5f7;
+  --shadow: none;
+  /* 正文改用系统字体（与首页 / aboutme 的苹果风格一致） */
+  --serif: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+           "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+           "Segoe UI", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --ink: #e6e4e0;
-    --ink-soft: #a5a19b;
-    --rule: #2e2e2c;
+    --ink: #f5f5f7;
+    --ink-soft: #86868b;
+    --rule: #424245;
     --paper: #000000;
     --desk: #000000;
-    --accent: #e59a86;
-    --foot-link: #f690ff;
+    --accent: #00ff00;
+    --foot-link: #00ff00;
     --mm-line: #6f6f6b;
-    --tint: #1a1a1a;
+    --tint: #1d1d1f;
     --shadow: none;
   }
 }
@@ -67,7 +68,7 @@ h1.title {
   margin: 0 0 .9rem;
   font-size: 1.5rem;
   line-height: 1.5;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: .02em;
 }
 
@@ -90,7 +91,7 @@ p {
 h2, h3 {
   margin: 2.2rem 0 .8rem;
   font-size: 1.05rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.5;
   text-indent: 0;
 }
@@ -266,7 +267,7 @@ hr {
 .unit > summary {
   margin: 1.2rem 0 .2rem;
   font-size: 1.05rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.5;
   cursor: pointer;
 }
@@ -306,7 +307,7 @@ hr {
   padding-bottom: .55rem;
   border-bottom: 1px solid var(--rule);
   font-size: .92rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .side-toc-close {
@@ -332,7 +333,7 @@ hr {
 .side-toc-unit > a {
   display: block;
   color: var(--ink);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 /* 高亮统一用博客的紫色 var(--foot-link)，跟着深浅色主题走 */
@@ -355,7 +356,7 @@ hr {
 .side-toc-lesson.is-active > a {
   color: var(--foot-link);
   border-left-color: var(--foot-link);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .toc-fab {
@@ -457,6 +458,13 @@ sup a { text-decoration: none; }
   }
 
   .paper-head { margin-bottom: 1.8rem; }
+
+  /* 打印时复位滚动动效的内联 opacity/transform，避免未浮现元素印成空白 */
+  .paper-head, article h2, article h3, article figure, article .mindmap,
+  article pre, article blockquote, article table, article .unit, article .toc, article .verse {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 
   a { color: inherit; }
 

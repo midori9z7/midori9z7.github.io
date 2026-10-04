@@ -1,21 +1,24 @@
+/* 诗目录索引页（posts/poems/*/index.html）样式：与首页/文章页一致的苹果风格 */
 body {
-  /* 与首页、文章页一致：英文 Palatino，中文用系统默认衬线 */
-  font-family: "Palatino Linotype", Palatino, "Iowan Old Style", "Book Antiqua", Georgia,
-               "Times New Roman", serif;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+               "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+               "Segoe UI", sans-serif;
+  background: #ffffff;
+  color: #1d1d1f;
 }
-.post {
-  max-width: 72em;
-}
+a { color: #00ff00; }
+.post { max-width: 72em; }
+h1 { font-weight: 600; letter-spacing: -0.015em; }
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: black;
-    color: white;
+    background-color: #000000;
+    color: #f5f5f7;
   }
   a {
-    color: #89a6ff;
+    color: #00ff00;
   }
   a:visited {
-    color: #f690ff;
+    color: #00ff00;
   }
 }
