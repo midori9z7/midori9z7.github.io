@@ -1,13 +1,13 @@
 /* reveal.js — 通用滚动动效（苹果风格，供所有页面复用）
    - Hero / 标题区（.hero / .paper-head）滚动视差淡出
-   - 内容块滚动联动浮现：.reveal、文章页标题·图·代码·思维导图、aboutme section、目录页
+   - 内容块滚动联动浮现：.reveal、文章页标题·图·代码·思维导图、目录页
    尊重 prefers-reduced-motion；打印时由 paper.css 的 !important 兜底复位。 */
 (function () {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   var FLOAT_SEL = '.reveal, article h2, article h3, article figure, article .mindmap, ' +
                   'article pre, article blockquote, article table, article .unit, ' +
-                  'article .toc, article .verse, .wrap section, .post h1, .post ul';
+                  'article .toc, article .verse, .post h1, .post ul';
   var floats = Array.prototype.slice.call(document.querySelectorAll(FLOAT_SEL));
   var hero = document.querySelector('.hero, .paper-head');
 

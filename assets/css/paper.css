@@ -1,4 +1,4 @@
-/* paper.css — 文章页排版（首页与 aboutme.html 仍用 style.css） */
+/* paper.css — 文章页排版（首页 index.html 仍用页内样式） */
 
 :root {
   --ink: #1d1d1f;
@@ -11,7 +11,7 @@
   --mm-line: #8e8e93;
   --tint: #f5f5f7;
   --shadow: none;
-  /* 正文改用系统字体（与首页 / aboutme 的苹果风格一致） */
+  /* 正文改用系统字体（与首页的苹果风格一致） */
   --serif: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
            "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
            "Segoe UI", sans-serif;

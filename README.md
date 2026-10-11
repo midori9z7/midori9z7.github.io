@@ -5,7 +5,7 @@ My personal blog.
 ## 结构
 
 ```
-index.html / aboutme.html   首页与自我介绍
+index.html                  首页：aboutme 版式 + 文章 / 诗歌 / 链接的完整清单
 assets/css/style.css        首页样式
 assets/css/paper.css        文章页样式（文章与诗都用它）
 assets/js/mindmap.js        把 FreeMind 的 .mm 渲染成导图
