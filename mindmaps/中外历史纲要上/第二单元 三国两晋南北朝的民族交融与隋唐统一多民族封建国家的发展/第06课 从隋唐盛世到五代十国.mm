@@ -1,122 +1,286 @@
-<map version="1.0.1">
-<!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node TEXT="第6课 从隋唐盛世到五代十国">
+<map version="freeplane 1.12.15">
+<!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
+<bookmarks/>
+<node TEXT="第6课 从隋唐盛世到五代十国" FOLDED="false" ID="ID_1400051523" CREATED="1792806799335" MODIFIED="1792819406225" CHILD_NODES_LAYOUT="AUTO">
 <font NAME="SansSerif" SIZE="12"/>
-  <node POSITION="right" TEXT="隋朝兴亡 581—618年">
-    <node TEXT="建立与统一">
-      <node TEXT="581年 杨坚代周称帝">
-        <node TEXT="北周外戚 隋文帝"/>
-        <node TEXT="定都长安 大兴城"/>
-      </node>
-      <node TEXT="589年 灭陈">
-        <node TEXT="结束南北长期分裂"/>
-        <node TEXT="重归统一"/>
-      </node>
-    </node>
-    <node TEXT="建设">
-      <node TEXT="开皇之治">
-        <node TEXT="隋文帝励精图治 国力日强"/>
-      </node>
-      <node TEXT="广设仓库">
-        <node TEXT="长安 洛阳两都"/>
-        <node TEXT="义仓 备水旱赈济"/>
-      </node>
-      <node TEXT="兴建洛阳城">
-        <node TEXT="隋炀帝 宏伟壮丽"/>
-      </node>
-      <node TEXT="开通大运河">
-        <node TEXT="贯通南北"/>
-        <node TEXT="巩固统一 促进南北交流 沿岸城市发展"/>
-      </node>
-    </node>
-    <node TEXT="灭亡 618年">
-      <node TEXT="原因">
-        <node TEXT="隋炀帝大兴土木 穷奢极欲"/>
-        <node TEXT="三征高丽"/>
-        <node TEXT="生产破坏 民不聊生 起义爆发"/>
-      </node>
-      <node TEXT="618年 隋炀帝被杀 隋亡"/>
-    </node>
-  </node>
-  <node POSITION="right" TEXT="唐朝的繁荣 618—907年">
-    <node TEXT="建立">
-      <node TEXT="618年 李渊长安称帝 唐高祖"/>
-      <node TEXT="统一全国"/>
-    </node>
-    <node TEXT="盛世">
-      <node TEXT="贞观之治">
-        <node TEXT="唐太宗李世民 虚心纳谏 知人善任"/>
-      </node>
-      <node TEXT="武则天">
-        <node TEXT="改国号武周 承上启下"/>
-      </node>
-      <node TEXT="开元盛世">
-        <node TEXT="唐玄宗前期 唐朝全盛"/>
-      </node>
-    </node>
-    <node TEXT="经济">
-      <node TEXT="曲辕犁 农业进步"/>
-    </node>
-  </node>
-  <node POSITION="right" TEXT="民族交融">
-    <node TEXT="政策">
-      <node TEXT="开明的民族政策"/>
-      <node TEXT="草原各族尊唐太宗为「天可汗」"/>
-    </node>
-    <node TEXT="方式">
-      <node TEXT="军事征讨">
-        <node TEXT="灭东突厥 西突厥"/>
-      </node>
-      <node TEXT="设机构">
-        <node TEXT="安西 北庭都护府 管辖西域"/>
-      </node>
-      <node TEXT="册封">
-        <node TEXT="回纥怀仁可汗 靺鞨渤海郡王"/>
-      </node>
-      <node TEXT="和亲">
-        <node TEXT="文成公主入藏 7世纪 松赞干布"/>
-      </node>
-      <node TEXT="会盟">
-        <node TEXT="长庆会盟 9世纪 唐蕃会盟碑"/>
-      </node>
-    </node>
-  </node>
-  <node POSITION="right" TEXT="安史之乱 755—763年">
-    <node TEXT="原因">
-      <node TEXT="唐玄宗后期怠政"/>
-      <node TEXT="节度使兵权过重 外重内轻"/>
-    </node>
-    <node TEXT="发动">
-      <node TEXT="安禄山 史思明"/>
-    </node>
-    <node TEXT="影响">
-      <node TEXT="唐朝由盛转衰"/>
-      <node TEXT="藩镇割据 中央衰弱"/>
-    </node>
-  </node>
-  <node POSITION="right" TEXT="黄巢起义与唐朝灭亡">
-    <node TEXT="黄巢起义 875—884年">
-      <node TEXT="沉重打击唐朝统治"/>
-    </node>
-    <node TEXT="907年 朱温灭唐 唐朝灭亡"/>
-  </node>
-  <node POSITION="right" TEXT="五代十国 907—960年">
-    <node TEXT="五代 北方">
-      <node TEXT="后梁 后唐 后晋 后汉 后周 更迭频繁"/>
-    </node>
-    <node TEXT="十国 南方">
-      <node TEXT="南方九国＋北汉 相对稳定 经济发展"/>
-    </node>
-    <node TEXT="实质">
-      <node TEXT="唐末藩镇割据的延续"/>
-    </node>
-    <node TEXT="后周世宗柴荣改革">
-      <node TEXT="为北宋统一奠基"/>
-    </node>
-  </node>
-  <node POSITION="right" TEXT="时代特点">
-    <node TEXT="由分裂走向统一"/>
-    <node TEXT="民族交融加深 统一趋势加强"/>
-  </node>
+<hook NAME="MapStyle" zoom="0.9090909">
+    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" auto_compact_layout="true" show_tags="UNDER_NODES" show_note_icons="true" fit_to_viewport="false" show_icons="BESIDE_NODES" showTagCategories="false"/>
+    <tags category_separator="::"/>
+
+<map_styles>
+<stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
+<font SIZE="24"/>
+<stylenode LOCALIZED_TEXT="styles.predefined" POSITION="bottom_or_right" STYLE="bubble">
+<stylenode LOCALIZED_TEXT="default" ID="ID_271890427" ICON_SIZE="12 pt" COLOR="#000000" STYLE="fork">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_271890427" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false" ITALIC="false"/>
+<richcontent TYPE="DETAILS" CONTENT-TYPE="plain/auto"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/auto"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="defaultstyle.details"/>
+<stylenode LOCALIZED_TEXT="defaultstyle.tags">
+<font SIZE="10"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="defaultstyle.attributes">
+<font SIZE="9"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="defaultstyle.note" COLOR="#000000" BACKGROUND_COLOR="#ffffff" TEXT_ALIGN="LEFT"/>
+<stylenode LOCALIZED_TEXT="defaultstyle.floating">
+<edge STYLE="hide_edge"/>
+<cloud COLOR="#f0f0f0" SHAPE="ROUND_RECT"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="defaultstyle.selection" BACKGROUND_COLOR="#afd3f7" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#afd3f7"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.user-defined" POSITION="bottom_or_right" STYLE="bubble">
+<stylenode LOCALIZED_TEXT="styles.topic" COLOR="#18898b" STYLE="fork">
+<font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.subtopic" COLOR="#cc3300" STYLE="fork">
+<font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.subsubtopic" COLOR="#669900">
+<font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.important" ID="ID_67550811">
+<icon BUILTIN="yes"/>
+<arrowlink COLOR="#003399" TRANSPARENCY="255" DESTINATION="ID_67550811"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.flower" COLOR="#ffffff" BACKGROUND_COLOR="#255aba" STYLE="oval" TEXT_ALIGN="CENTER" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="22 pt" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#f9d71c" BORDER_DASH_LIKE_EDGE="false" BORDER_DASH="CLOSE_DOTS" MAX_WIDTH="6 cm" MIN_WIDTH="3 cm"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="bottom_or_right" STYLE="bubble">
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level.root" COLOR="#000000" STYLE="oval" SHAPE_HORIZONTAL_MARGIN="10 pt" SHAPE_VERTICAL_MARGIN="10 pt">
+<font SIZE="18"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,1" COLOR="#0033ff">
+<font SIZE="16"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,2" COLOR="#00b439">
+<font SIZE="14"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,3" COLOR="#990000">
+<font SIZE="12"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,4" COLOR="#111111">
+<font SIZE="10"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,5"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,6"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,7"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,8"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,9"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,10"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,11"/>
+</stylenode>
+</stylenode>
+</map_styles>
+</hook>
+<node TEXT="隋 581—618" POSITION="bottom_or_right" ID="ID_760768343" CREATED="1792806799335" MODIFIED="1792821579495">
+<node TEXT="建立" ID="ID_1982943017" CREATED="1792806799335" MODIFIED="1792818888157">
+<node TEXT="581年 杨坚代周称帝" ID="ID_853096009" CREATED="1792806799335" MODIFIED="1792806799335">
+<node TEXT="北周外戚 隋文帝" ID="ID_1957728483" CREATED="1792806799335" MODIFIED="1792806799335"/>
+<node TEXT="定都长安 迁都大兴城" ID="ID_1808569288" CREATED="1792806799335" MODIFIED="1792818545422"/>
+</node>
+<node TEXT="589年 杨广灭陈" ID="ID_1976016635" CREATED="1792806799335" MODIFIED="1792818567743">
+<node TEXT="结束南北长期分裂" ID="ID_1764360424" CREATED="1792806799335" MODIFIED="1792806799335"/>
+</node>
+</node>
+<node TEXT="政治" ID="ID_1728205666" CREATED="1792819070063" MODIFIED="1792819076323">
+<node TEXT="改革行政机构" ID="ID_959147439" CREATED="1792819077733" MODIFIED="1792819119093"/>
+<node TEXT="确立三省六部制" ID="ID_226814124" CREATED="1792819119203" MODIFIED="1792819121570"/>
+<node TEXT="新选官制度-科举制" ID="ID_1490471611" CREATED="1792819102113" MODIFIED="1792819133763"/>
+<node TEXT="修行法律《开皇律》" ID="ID_1792847098" CREATED="1792819134123" MODIFIED="1792819143053"/>
+<node TEXT="废除酷刑" ID="ID_466263569" CREATED="1792819148353" MODIFIED="1792819150673"/>
+<node TEXT="两京制" ID="ID_744293743" CREATED="1792819150813" MODIFIED="1792819162383">
+<node TEXT="长安" ID="ID_96600301" CREATED="1792819163814" MODIFIED="1792819167445">
+<node TEXT="政治" ID="ID_139338697" CREATED="1792819183777" MODIFIED="1792819190733"/>
+</node>
+<node TEXT="洛阳" ID="ID_53783311" CREATED="1792819167763" MODIFIED="1792819171923">
+<node TEXT="行政 经济" ID="ID_1900722969" CREATED="1792819174063" MODIFIED="1792821200942"/>
+</node>
+</node>
+</node>
+<node TEXT="经济" ID="ID_1548659141" CREATED="1792819194873" MODIFIED="1792819197505">
+<node TEXT="延续均田制" ID="ID_1622435042" CREATED="1792819200553" MODIFIED="1792819210783"/>
+<node TEXT="减轻赋税徭役" ID="ID_1707754022" CREATED="1792819210963" MODIFIED="1792819217763"/>
+<node TEXT="倡导节俭" ID="ID_483762134" CREATED="1792819218016" MODIFIED="1792819223023"/>
+<node TEXT="统一币制" ID="ID_1430303425" CREATED="1792819223294" MODIFIED="1792819229763"/>
+</node>
+<node TEXT="成就" ID="ID_276524490" CREATED="1792806799335" MODIFIED="1792819045955">
+<node TEXT="广设仓库" ID="ID_1481424321" CREATED="1792806799335" MODIFIED="1792806799335">
+<node TEXT="长安 洛阳两都" ID="ID_1618288076" CREATED="1792806799335" MODIFIED="1792806799335"/>
+<node TEXT="义仓 备水旱赈济" ID="ID_1438461334" CREATED="1792806799335" MODIFIED="1792806799335"/>
+</node>
+<node TEXT="兴建洛阳城" ID="ID_598303327" CREATED="1792806799335" MODIFIED="1792806799335">
+<node TEXT="宏伟壮丽" ID="ID_1487505881" CREATED="1792806799335" MODIFIED="1792818696914"/>
+</node>
+<node TEXT="开通大运河" ID="ID_362175977" CREATED="1792806799338" MODIFIED="1792806799338">
+<node TEXT="贯通南北" ID="ID_267538338" CREATED="1792806799338" MODIFIED="1792806799338"/>
+<node TEXT="巩固统一" ID="ID_750479307" CREATED="1792806799338" MODIFIED="1792818730493"/>
+<node TEXT="南北交流" ID="ID_1729867552" CREATED="1792818724623" MODIFIED="1792818750987"/>
+<node TEXT="沿岸城市发展" ID="ID_834573260" CREATED="1792818731337" MODIFIED="1792818758989"/>
+</node>
+</node>
+<node TEXT="灭亡" ID="ID_38192827" CREATED="1792806799338" MODIFIED="1792818894587">
+<node TEXT="原因" ID="ID_1570947410" CREATED="1792806799338" MODIFIED="1792806799338">
+<node TEXT="" ID="ID_234354178" CREATED="1792818812283" MODIFIED="1792818812283">
+<hook NAME="FirstGroupNode"/>
+</node>
+<node TEXT="大兴土木 穷奢极欲" ID="ID_183082483" CREATED="1792806799338" MODIFIED="1792818797573"/>
+<node TEXT="三征高丽" ID="ID_253382405" CREATED="1792806799338" MODIFIED="1792806799338"/>
+<node TEXT="生产破坏 民不聊生 起义爆发" ID="ID_247080722" CREATED="1792806799338" MODIFIED="1792806799338"/>
+<node TEXT="" ID="ID_1742336227" CREATED="1792818812274" MODIFIED="1792818812283">
+<hook NAME="SummaryNode"/>
+<hook NAME="AlwaysUnfoldedNode"/>
+<node TEXT="根本原因：隋炀帝暴政" ID="ID_713276001" CREATED="1792818812283" MODIFIED="1792818827673"/>
+</node>
+</node>
+<node TEXT="隋炀帝在江都（扬州）被杀 隋亡" ID="ID_800047640" CREATED="1792806799338" MODIFIED="1792818902923"/>
+</node>
+</node>
+<node TEXT="唐 618—907" POSITION="bottom_or_right" ID="ID_843718602" CREATED="1792806799338" MODIFIED="1792821568762">
+<node TEXT="建立" ID="ID_1566397687" CREATED="1792806799338" MODIFIED="1792806799338">
+<node TEXT="618年 李渊长安称帝 唐高祖" ID="ID_1157391047" CREATED="1792806799338" MODIFIED="1792806799338"/>
+<node TEXT="隋恭帝 傀儡皇帝" ID="ID_224288119" CREATED="1792806799338" MODIFIED="1792819486683"/>
+</node>
+<node TEXT="盛世局面" ID="ID_348923875" CREATED="1792806799338" MODIFIED="1792820379224">
+<node TEXT="贞观" ID="ID_249784696" CREATED="1792806799338" MODIFIED="1792819494393">
+<node TEXT="经济" ID="ID_87981099" CREATED="1792806799338" MODIFIED="1792819508993">
+<node TEXT="均田制" ID="ID_1967051994" CREATED="1792819509723" MODIFIED="1792819513633"/>
+<node TEXT="租庸调制" ID="ID_1658383832" CREATED="1792819513853" MODIFIED="1792819526843">
+<node TEXT="可代徭役" ID="ID_501992006" CREATED="1792819527353" MODIFIED="1792819554984"/>
+</node>
+</node>
+<node TEXT="政治" ID="ID_419346776" CREATED="1792819561793" MODIFIED="1792819566843">
+<node TEXT="完善三省六部" ID="ID_1014995487" CREATED="1792819568453" MODIFIED="1792819574343"/>
+<node TEXT="增加科举考试科目" ID="ID_959416172" CREATED="1792819576053" MODIFIED="1792819581193"/>
+<node TEXT="用人" ID="ID_861704818" CREATED="1792819581845" MODIFIED="1792819583733">
+<node TEXT="房（玄龄）谋杜（如晦）断" ID="ID_1091832231" CREATED="1792819589103" MODIFIED="1792819665784"/>
+<node TEXT="魏征" ID="ID_1485492740" CREATED="1792819602613" MODIFIED="1792819613503"/>
+</node>
+</node>
+<node TEXT="民族" ID="ID_492053164" CREATED="1792819675573" MODIFIED="1792819678771">
+<node TEXT="政策开明" ID="ID_1247020151" CREATED="1792819679343" MODIFIED="1792819718923"/>
+</node>
+</node>
+<node TEXT="武则天" ID="ID_512625584" CREATED="1792806799338" MODIFIED="1792806799338">
+<node TEXT="改国号武周 承上启下" ID="ID_650282216" CREATED="1792806799338" MODIFIED="1792806799338"/>
+</node>
+<node TEXT="开元" ID="ID_652319915" CREATED="1792806799338" MODIFIED="1792819884071">
+<node TEXT="唐玄宗前期 唐朝全盛" ID="ID_732747578" CREATED="1792806799338" MODIFIED="1792806799338"/>
+<node TEXT="政治" ID="ID_1199509457" CREATED="1792819893593" MODIFIED="1792819897883">
+<node TEXT="募兵制代替府兵制" ID="ID_1717881946" CREATED="1792819898313" MODIFIED="1792819910483"/>
+</node>
+<node TEXT="经济" ID="ID_1867572219" CREATED="1792819918781" MODIFIED="1792819926183">
+<node TEXT="抑制土地兼并" ID="ID_1422591546" CREATED="1792819926581" MODIFIED="1792820213434">
+<node TEXT="限购令禁止一切土地买卖" ID="ID_1503315741" CREATED="1792820059553" MODIFIED="1792820213434"/>
+</node>
+</node>
+<node TEXT="文化" ID="ID_1991573119" CREATED="1792820103563" MODIFIED="1792820106365">
+<node TEXT="儒学" ID="ID_675711367" CREATED="1792820107053" MODIFIED="1792820163766"/>
+<node TEXT="限制佛教" ID="ID_1161402226" CREATED="1792820192043" MODIFIED="1792820195712"/>
+</node>
+</node>
+</node>
+<node TEXT="盛世表现" ID="ID_153308604" CREATED="1792806799338" MODIFIED="1792820238113">
+<node TEXT="农业" ID="ID_1878736575" CREATED="1792806799338" MODIFIED="1792820250753">
+<node TEXT="曲辕犁 筒车" ID="ID_399243151" CREATED="1792820251233" MODIFIED="1792820329013"/>
+</node>
+<node TEXT="商业" ID="ID_1211625829" CREATED="1792820295014" MODIFIED="1792820297653">
+<node TEXT="柜坊 飞钱 夜市" ID="ID_1963806032" CREATED="1792820299423" MODIFIED="1792820324762"/>
+</node>
+<node TEXT="手工业" ID="ID_221724733" CREATED="1792820331623" MODIFIED="1792820336469">
+<node TEXT="制瓷业" ID="ID_1453915600" CREATED="1792820337493" MODIFIED="1792820544614">
+<node TEXT="成为独立的生产部门" ID="ID_1234642580" CREATED="1792820557973" MODIFIED="1792820564202"/>
+<node TEXT="陪葬品" ID="ID_1935033966" CREATED="1792820565784" MODIFIED="1792820568142"/>
+<node TEXT="南青北白" ID="ID_57953595" CREATED="1792820568282" MODIFIED="1792820575783"/>
+</node>
+<node TEXT="制陶业" ID="ID_523644160" CREATED="1792820544762" MODIFIED="1792820546522"/>
+</node>
+</node>
+<node TEXT="盛世特点" ID="ID_660785740" CREATED="1792820344742" MODIFIED="1792820348863">
+<node TEXT="经济发达 国力强盛" ID="ID_313144876" CREATED="1792820383063" MODIFIED="1792820390065"/>
+<node TEXT="政治清明 社会稳定" ID="ID_1335937270" CREATED="1792820390252" MODIFIED="1792820406673"/>
+<node TEXT="文化繁荣 国际影响" ID="ID_747524170" CREATED="1792820403644" MODIFIED="1792820424936"/>
+<node TEXT="国家一统 疆域辽阔" ID="ID_1523835816" CREATED="1792820425223" MODIFIED="1792820439378"/>
+</node>
+<node TEXT="民族交融" ID="ID_382583602" CREATED="1792806799338" MODIFIED="1792806799338">
+<node TEXT="开明政策" ID="ID_809268502" CREATED="1792806799338" MODIFIED="1792820608016">
+<node TEXT="措施灵活多样 战而后和 以和为主" ID="ID_295821504" CREATED="1792820624276" MODIFIED="1792820777662"/>
+<node TEXT="羁縻府州 以夷制夷 因俗而治 因地制宜" ID="ID_1313935607" CREATED="1792820647473" MODIFIED="1792820683342"/>
+</node>
+<node TEXT="交往方式" ID="ID_1398717979" CREATED="1792806799338" MODIFIED="1792820739994">
+<node TEXT="军事征讨" ID="ID_1170690112" CREATED="1792806799338" MODIFIED="1792806799338">
+<node TEXT="灭东突厥 西突厥" ID="ID_880039313" CREATED="1792806799338" MODIFIED="1792806799338">
+<node TEXT="草原各族尊唐太宗为「天可汗」" POSITION="bottom_or_right" ID="ID_1683930396" CREATED="1792806799338" MODIFIED="1792806799338"/>
+</node>
+</node>
+<node TEXT="机构设置" ID="ID_1000806551" CREATED="1792806799338" MODIFIED="1792820826452">
+<node TEXT="西域" ID="ID_1155304145" CREATED="1792806799338" MODIFIED="1792820965752">
+<node TEXT="安西都护府 北庭都护府" ID="ID_772660697" CREATED="1792820966582" MODIFIED="1792820969326"/>
+</node>
+<node TEXT="其他" ID="ID_1971457970" CREATED="1792820970256" MODIFIED="1792820984182">
+<node TEXT="单于 安北 安东-都护府" ID="ID_500033409" CREATED="1792820985062" MODIFIED="1792821042076"/>
+<node TEXT="瀚海 渤海 黑水-都督府" ID="ID_720769234" CREATED="1792821002345" MODIFIED="1792821073252"/>
+</node>
+</node>
+<node TEXT="册封" ID="ID_587045441" CREATED="1792806799338" MODIFIED="1792806799338">
+<node TEXT="西域回纥怀仁可汗" ID="ID_118516430" CREATED="1792806799338" MODIFIED="1792821116662"/>
+<node TEXT="东北靺鞨渤海郡王" ID="ID_824134178" CREATED="1792821116792" MODIFIED="1792821118622"/>
+</node>
+<node TEXT="和亲" ID="ID_1298912518" CREATED="1792806799338" MODIFIED="1792806799338">
+<node TEXT="松赞干布 7世纪 文成公主入藏" ID="ID_216109794" CREATED="1792806799338" MODIFIED="1792821181592"/>
+</node>
+<node TEXT="会盟" ID="ID_1218856258" CREATED="1792806799338" MODIFIED="1792806799338">
+<node TEXT="唐穆宗长庆会盟 9世纪 唐蕃会盟碑" ID="ID_1918002624" CREATED="1792806799338" MODIFIED="1792821149382"/>
+</node>
+</node>
+<node TEXT="影响" ID="ID_685845336" CREATED="1792821396122" MODIFIED="1792821404382">
+<node TEXT="少民政权开发祖国边疆" ID="ID_1736206239" CREATED="1792821405054" MODIFIED="1792821436762"/>
+<node TEXT="有利于民族交融" ID="ID_852997352" CREATED="1792821437136" MODIFIED="1792821442452"/>
+<node TEXT="有利于统一多民族发展" ID="ID_305385357" CREATED="1792821442622" MODIFIED="1792821451869"/>
+</node>
+<node TEXT="启示" ID="ID_1777270026" CREATED="1792821453925" MODIFIED="1792821460702">
+<node TEXT="坚持民族平等、民族团结和多民族共同繁荣的基本政策" ID="ID_1513727929" CREATED="1792821463114" MODIFIED="1792821495106"/>
+<node TEXT="尊重少数民族的习俗与信仰" ID="ID_1902664185" CREATED="1792821495402" MODIFIED="1792821504768"/>
+<node TEXT="坚持民族区域自治" ID="ID_1232498494" CREATED="1792821504902" MODIFIED="1792821513972"/>
+</node>
+</node>
+<node TEXT="安史之乱 755—763年" POSITION="bottom_or_right" ID="ID_1798631308" CREATED="1792806799338" MODIFIED="1792806799338">
+<node TEXT="原因" ID="ID_1508595963" CREATED="1792806799338" MODIFIED="1792806799338">
+<node TEXT="唐玄宗后期怠政" ID="ID_897965859" CREATED="1792806799338" MODIFIED="1792806799338"/>
+<node TEXT="胡人担任节度使 兵权过重 外重内轻" ID="ID_1811543764" CREATED="1792806799338" MODIFIED="1792821624992"/>
+</node>
+<node TEXT="发动" ID="ID_248201427" CREATED="1792806799338" MODIFIED="1792806799338">
+<node TEXT="安禄山 史思明" ID="ID_1946138217" CREATED="1792806799338" MODIFIED="1792806799338"/>
+</node>
+<node TEXT="影响" ID="ID_1837781432" CREATED="1792806799338" MODIFIED="1792806799338">
+<node TEXT="唐朝由盛转衰" ID="ID_949590073" CREATED="1792806799338" MODIFIED="1792806799338"/>
+<node TEXT="藩镇割据 中央衰弱" ID="ID_340049152" CREATED="1792806799338" MODIFIED="1792806799338"/>
+</node>
+</node>
+<node TEXT="黄巢起义与唐朝灭亡" POSITION="bottom_or_right" ID="ID_454719774" CREATED="1792806799338" MODIFIED="1792806799338">
+<node TEXT="黄巢起义 875—884年" ID="ID_457174536" CREATED="1792806799338" MODIFIED="1792806799338">
+<node TEXT="沉重打击唐朝统治" ID="ID_1103294903" CREATED="1792806799338" MODIFIED="1792806799338"/>
+</node>
+<node TEXT="907年 朱温废唐称帝 唐朝灭亡" ID="ID_378578854" CREATED="1792806799338" MODIFIED="1792821763892"/>
+</node>
+</node>
+<node TEXT="五代十国 907—960" POSITION="bottom_or_right" ID="ID_918817617" CREATED="1792806799338" MODIFIED="1792821573982">
+<node TEXT="北方五代" ID="ID_1942681124" CREATED="1792806799338" MODIFIED="1792821809502">
+<node TEXT="后梁 后唐 后晋 后汉 后周 更迭频繁" ID="ID_1157270404" CREATED="1792806799338" MODIFIED="1792806799338"/>
+</node>
+<node TEXT="南方十国" ID="ID_1813411619" CREATED="1792806799338" MODIFIED="1792821805295">
+<node TEXT="南方九国+北汉 相对稳定 经济发展" ID="ID_1223892183" CREATED="1792806799338" MODIFIED="1792821789344"/>
+</node>
+<node TEXT="时代特点" ID="ID_313811214" CREATED="1792806799338" MODIFIED="1792821825292">
+<node TEXT="唐末以来藩镇割据的延续" ID="ID_1772319971" CREATED="1792806799338" MODIFIED="1792821852232"/>
+<node TEXT="开国君主均为手握兵权的武将" ID="ID_670550963" CREATED="1792821852382" MODIFIED="1792821864332"/>
+<node TEXT="北方政权更迭频繁，战事不断政局动荡" ID="ID_1727678293" CREATED="1792821864642" MODIFIED="1792821904351"/>
+<node TEXT="南方受战乱影响较小，社会较稳定" ID="ID_814976607" CREATED="1792821905795" MODIFIED="1792821920722"/>
+</node>
+<node TEXT="后周世宗柴荣改革" ID="ID_1293505434" CREATED="1792806799338" MODIFIED="1792806799338">
+<node TEXT="为北宋统一奠基" ID="ID_83251082" CREATED="1792806799338" MODIFIED="1792806799338"/>
+</node>
+</node>
 </node>
 </map>

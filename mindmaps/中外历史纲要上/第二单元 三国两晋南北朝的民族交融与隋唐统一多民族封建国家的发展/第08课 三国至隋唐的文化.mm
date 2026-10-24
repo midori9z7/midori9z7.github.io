@@ -1,105 +1,177 @@
-<map version="1.0.1">
-<!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node TEXT="第8课 三国至隋唐的文化">
+<map version="freeplane 1.12.15">
+<!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
+<bookmarks/>
+<node TEXT="第8课 三国至隋唐的文化" FOLDED="false" ID="ID_587663466" CREATED="1792822250016" MODIFIED="1792822250016">
 <font NAME="SansSerif" SIZE="12"/>
-  <node POSITION="right" TEXT="思想 三教并行">
-    <node TEXT="儒学">
-      <node TEXT="正统地位"/>
-      <node TEXT="唐中期韩愈复兴儒学"/>
-    </node>
-    <node TEXT="道教">
-      <node TEXT="本土宗教 东汉形成"/>
-      <node TEXT="魏晋发展 唐朝鼎盛"/>
-    </node>
-    <node TEXT="佛教">
-      <node TEXT="西汉末传入 魏晋盛行 隋唐鼎盛"/>
-      <node TEXT="本土化">
-        <node TEXT="玄奘西行 鉴真东渡"/>
-      </node>
-    </node>
-    <node TEXT="反佛斗争">
-      <node TEXT="南朝范缜《神灭论》">
-        <node TEXT="无神论"/>
-      </node>
-      <node TEXT="统治者灭佛"/>
-    </node>
-  </node>
-  <node POSITION="right" TEXT="文学艺术">
-    <node TEXT="文学">
-      <node TEXT="建安文学">
-        <node TEXT="曹操 曹丕 曹植"/>
-      </node>
-      <node TEXT="田园诗">
-        <node TEXT="陶渊明"/>
-      </node>
-      <node TEXT="南北朝民歌">
-        <node TEXT="《木兰诗》"/>
-      </node>
-      <node TEXT="唐诗">
-        <node TEXT="李白 杜甫 白居易"/>
-      </node>
-    </node>
-    <node TEXT="书法">
-      <node TEXT="东汉成为艺术"/>
-      <node TEXT="王羲之">
-        <node TEXT="书圣 《兰亭集序》"/>
-      </node>
-      <node TEXT="颜真卿 柳公权">
-        <node TEXT="楷书 草书"/>
-      </node>
-    </node>
-    <node TEXT="绘画">
-      <node TEXT="顾恺之">
-        <node TEXT="以形写神"/>
-      </node>
-      <node TEXT="吴道子">
-        <node TEXT="画圣"/>
-      </node>
-    </node>
-    <node TEXT="石窟">
-      <node TEXT="云冈 龙门 敦煌莫高窟 佛教艺术"/>
-    </node>
-  </node>
-  <node POSITION="right" TEXT="科技">
-    <node TEXT="数学">
-      <node TEXT="祖冲之圆周率 小数点后七位"/>
-    </node>
-    <node TEXT="农学">
-      <node TEXT="贾思勰《齐民要术》 现存最早完整农书"/>
-    </node>
-    <node TEXT="地理">
-      <node TEXT="裴秀《禹贡地域图》"/>
-    </node>
-    <node TEXT="建筑">
-      <node TEXT="李春赵州桥 现存最古老石拱桥"/>
-    </node>
-    <node TEXT="印刷">
-      <node TEXT="雕版印刷《金刚经》"/>
-    </node>
-    <node TEXT="医药">
-      <node TEXT="孙思邈《千金方》 《唐本草》最早国家药典"/>
-    </node>
-    <node TEXT="天文">
-      <node TEXT="僧一行实测子午线长度"/>
-    </node>
-    <node TEXT="火药">
-      <node TEXT="唐末用于军事"/>
-    </node>
-  </node>
-  <node POSITION="right" TEXT="中外文化交流">
-    <node TEXT="玄奘西行">
-      <node TEXT="天竺取经 《大唐西域记》"/>
-    </node>
-    <node TEXT="鉴真东渡">
-      <node TEXT="日本传法 传播唐文化"/>
-    </node>
-    <node TEXT="遣唐使">
-      <node TEXT="日本 新罗留学生 大化改新"/>
-    </node>
-    <node TEXT="影响">
-      <node TEXT="异域文化影响中国"/>
-      <node TEXT="中华文化远播"/>
-    </node>
-  </node>
+<hook NAME="MapStyle">
+    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" auto_compact_layout="true" fit_to_viewport="false" show_icons="BESIDE_NODES" showTagCategories="false" show_tags="UNDER_NODES" show_icon_for_attributes="true" show_note_icons="true"/>
+    <tags category_separator="::"/>
+
+<map_styles>
+<stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
+<font SIZE="24"/>
+<stylenode LOCALIZED_TEXT="styles.predefined" POSITION="bottom_or_right" STYLE="bubble">
+<stylenode LOCALIZED_TEXT="default" ID="ID_271890427" ICON_SIZE="12 pt" COLOR="#000000" STYLE="fork">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_271890427" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false" ITALIC="false"/>
+<richcontent TYPE="DETAILS" CONTENT-TYPE="plain/auto"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/auto"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="defaultstyle.details"/>
+<stylenode LOCALIZED_TEXT="defaultstyle.tags">
+<font SIZE="10"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="defaultstyle.attributes">
+<font SIZE="9"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="defaultstyle.note" COLOR="#000000" BACKGROUND_COLOR="#ffffff" TEXT_ALIGN="LEFT"/>
+<stylenode LOCALIZED_TEXT="defaultstyle.floating">
+<edge STYLE="hide_edge"/>
+<cloud COLOR="#f0f0f0" SHAPE="ROUND_RECT"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="defaultstyle.selection" BACKGROUND_COLOR="#afd3f7" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#afd3f7"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.user-defined" POSITION="bottom_or_right" STYLE="bubble">
+<stylenode LOCALIZED_TEXT="styles.topic" COLOR="#18898b" STYLE="fork">
+<font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.subtopic" COLOR="#cc3300" STYLE="fork">
+<font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.subsubtopic" COLOR="#669900">
+<font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.important" ID="ID_67550811">
+<icon BUILTIN="yes"/>
+<arrowlink COLOR="#003399" TRANSPARENCY="255" DESTINATION="ID_67550811"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.flower" COLOR="#ffffff" BACKGROUND_COLOR="#255aba" STYLE="oval" TEXT_ALIGN="CENTER" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="22 pt" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#f9d71c" BORDER_DASH_LIKE_EDGE="false" BORDER_DASH="CLOSE_DOTS" MAX_WIDTH="6 cm" MIN_WIDTH="3 cm"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="bottom_or_right" STYLE="bubble">
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level.root" COLOR="#000000" STYLE="oval" SHAPE_HORIZONTAL_MARGIN="10 pt" SHAPE_VERTICAL_MARGIN="10 pt">
+<font SIZE="18"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,1" COLOR="#0033ff">
+<font SIZE="16"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,2" COLOR="#00b439">
+<font SIZE="14"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,3" COLOR="#990000">
+<font SIZE="12"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,4" COLOR="#111111">
+<font SIZE="10"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,5"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,6"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,7"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,8"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,9"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,10"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,11"/>
+</stylenode>
+</stylenode>
+</map_styles>
+</hook>
+<node TEXT="思想 三教并行" POSITION="bottom_or_right" ID="ID_375854741" CREATED="1792822250018" MODIFIED="1792822250018">
+<node TEXT="儒学" ID="ID_1974743980" CREATED="1792822250018" MODIFIED="1792822250018">
+<node TEXT="正统地位" ID="ID_1485181184" CREATED="1792822250018" MODIFIED="1792822250018"/>
+<node TEXT="唐中期韩愈复兴儒学" ID="ID_1941601202" CREATED="1792822250018" MODIFIED="1792822250018"/>
+</node>
+<node TEXT="道教" ID="ID_109627281" CREATED="1792822250018" MODIFIED="1792822250018">
+<node TEXT="本土宗教 东汉形成" ID="ID_635946408" CREATED="1792822250018" MODIFIED="1792822250018"/>
+<node TEXT="魏晋发展 唐朝鼎盛" ID="ID_918758248" CREATED="1792822250018" MODIFIED="1792822250018"/>
+</node>
+<node TEXT="佛教" ID="ID_931125810" CREATED="1792822250018" MODIFIED="1792822250018">
+<node TEXT="西汉末传入 魏晋盛行 隋唐鼎盛" ID="ID_614503585" CREATED="1792822250018" MODIFIED="1792822250018"/>
+<node TEXT="本土化" ID="ID_1148720616" CREATED="1792822250018" MODIFIED="1792822250018">
+<node TEXT="玄奘西行 鉴真东渡" ID="ID_1002823864" CREATED="1792822250018" MODIFIED="1792822250018"/>
+</node>
+</node>
+<node TEXT="反佛斗争" ID="ID_295047794" CREATED="1792822250018" MODIFIED="1792822250018">
+<node TEXT="南朝范缜《神灭论》" ID="ID_1440043696" CREATED="1792822250018" MODIFIED="1792822250018">
+<node TEXT="无神论" ID="ID_1337520896" CREATED="1792822250018" MODIFIED="1792822250018"/>
+</node>
+<node TEXT="统治者灭佛" ID="ID_91283704" CREATED="1792822250018" MODIFIED="1792822250018"/>
+</node>
+</node>
+<node TEXT="文学艺术" POSITION="bottom_or_right" ID="ID_1625770310" CREATED="1792822250018" MODIFIED="1792822250018">
+<node TEXT="文学" ID="ID_1124519607" CREATED="1792822250018" MODIFIED="1792822250018">
+<node TEXT="建安文学" ID="ID_1311238716" CREATED="1792822250018" MODIFIED="1792822250018">
+<node TEXT="曹操 曹丕 曹植" ID="ID_1228649457" CREATED="1792822250018" MODIFIED="1792822250018"/>
+</node>
+<node TEXT="田园诗" ID="ID_1644950704" CREATED="1792822250018" MODIFIED="1792822250018">
+<node TEXT="陶渊明" ID="ID_1336295260" CREATED="1792822250018" MODIFIED="1792822250018"/>
+</node>
+<node TEXT="南北朝民歌" ID="ID_587785587" CREATED="1792822250018" MODIFIED="1792822250018">
+<node TEXT="《木兰诗》" ID="ID_452079726" CREATED="1792822250018" MODIFIED="1792822250018"/>
+</node>
+<node TEXT="唐诗" ID="ID_1051378922" CREATED="1792822250018" MODIFIED="1792822250018">
+<node TEXT="李白 杜甫 白居易" ID="ID_440101878" CREATED="1792822250018" MODIFIED="1792822250018"/>
+</node>
+</node>
+<node TEXT="书法" ID="ID_1381385140" CREATED="1792822250018" MODIFIED="1792822250018">
+<node TEXT="东汉成为艺术" ID="ID_245712809" CREATED="1792822250018" MODIFIED="1792822250018"/>
+<node TEXT="王羲之" ID="ID_1356536790" CREATED="1792822250018" MODIFIED="1792822250018">
+<node TEXT="书圣 《兰亭集序》" ID="ID_1752842313" CREATED="1792822250018" MODIFIED="1792822250018"/>
+</node>
+<node TEXT="颜真卿 柳公权" ID="ID_1326425198" CREATED="1792822250018" MODIFIED="1792822250018">
+<node TEXT="楷书 草书" ID="ID_1939562384" CREATED="1792822250018" MODIFIED="1792822250018"/>
+</node>
+</node>
+<node TEXT="绘画" ID="ID_1775391764" CREATED="1792822250018" MODIFIED="1792822250018">
+<node TEXT="顾恺之" ID="ID_1555811474" CREATED="1792822250018" MODIFIED="1792822250018">
+<node TEXT="以形写神" ID="ID_1831794189" CREATED="1792822250018" MODIFIED="1792822250018"/>
+</node>
+<node TEXT="吴道子" ID="ID_197893292" CREATED="1792822250018" MODIFIED="1792822250018">
+<node TEXT="画圣" ID="ID_291379655" CREATED="1792822250018" MODIFIED="1792822250018"/>
+</node>
+</node>
+<node TEXT="石窟" ID="ID_642479207" CREATED="1792822250018" MODIFIED="1792822250018">
+<node TEXT="云冈 龙门 敦煌莫高窟 佛教艺术" ID="ID_1955795777" CREATED="1792822250018" MODIFIED="1792822250018"/>
+</node>
+</node>
+<node TEXT="科技" POSITION="bottom_or_right" ID="ID_363923025" CREATED="1792822250018" MODIFIED="1792822250018">
+<node TEXT="数学" ID="ID_842983402" CREATED="1792822250018" MODIFIED="1792822250018">
+<node TEXT="祖冲之圆周率 小数点后七位" ID="ID_1285061484" CREATED="1792822250018" MODIFIED="1792822250018"/>
+</node>
+<node TEXT="农学" ID="ID_1793646705" CREATED="1792822250018" MODIFIED="1792822250018">
+<node TEXT="贾思勰《齐民要术》 现存最早完整农书" ID="ID_1684481048" CREATED="1792822250018" MODIFIED="1792822250018"/>
+</node>
+<node TEXT="地理" ID="ID_1743061983" CREATED="1792822250018" MODIFIED="1792822250018">
+<node TEXT="裴秀《禹贡地域图》" ID="ID_337253324" CREATED="1792822250018" MODIFIED="1792822250018"/>
+</node>
+<node TEXT="建筑" ID="ID_1440790372" CREATED="1792822250018" MODIFIED="1792822250018">
+<node TEXT="李春赵州桥 现存最古老石拱桥" ID="ID_1439539970" CREATED="1792822250018" MODIFIED="1792822250018"/>
+</node>
+<node TEXT="印刷" ID="ID_1814608248" CREATED="1792822250018" MODIFIED="1792822250018">
+<node TEXT="雕版印刷《金刚经》" ID="ID_1149130872" CREATED="1792822250018" MODIFIED="1792822250018"/>
+</node>
+<node TEXT="医药" ID="ID_101055008" CREATED="1792822250018" MODIFIED="1792822250018">
+<node TEXT="孙思邈《千金方》 《唐本草》最早国家药典" ID="ID_1235425200" CREATED="1792822250018" MODIFIED="1792822250018"/>
+</node>
+<node TEXT="天文" ID="ID_910877345" CREATED="1792822250018" MODIFIED="1792822250018">
+<node TEXT="僧一行实测子午线长度" ID="ID_1506360293" CREATED="1792822250018" MODIFIED="1792822250018"/>
+</node>
+<node TEXT="火药" ID="ID_31931339" CREATED="1792822250018" MODIFIED="1792822250018">
+<node TEXT="唐末用于军事" ID="ID_1220071654" CREATED="1792822250018" MODIFIED="1792822250018"/>
+</node>
+</node>
+<node TEXT="中外文化交流" POSITION="bottom_or_right" ID="ID_1981103237" CREATED="1792822250018" MODIFIED="1792822250018">
+<node TEXT="玄奘西行" ID="ID_1040147373" CREATED="1792822250018" MODIFIED="1792822250018">
+<node TEXT="天竺取经 《大唐西域记》" ID="ID_1864180086" CREATED="1792822250018" MODIFIED="1792822250018"/>
+</node>
+<node TEXT="鉴真东渡" ID="ID_1821155586" CREATED="1792822250018" MODIFIED="1792822250018">
+<node TEXT="日本传法 传播唐文化" ID="ID_830272138" CREATED="1792822250018" MODIFIED="1792822250018"/>
+</node>
+<node TEXT="遣唐使" ID="ID_587862101" CREATED="1792822250018" MODIFIED="1792822250018">
+<node TEXT="日本 新罗留学生 大化改新" ID="ID_660597731" CREATED="1792822250018" MODIFIED="1792822250018"/>
+</node>
+<node TEXT="影响" ID="ID_1170930949" CREATED="1792822250018" MODIFIED="1792822250018">
+<node TEXT="异域文化影响中国" ID="ID_529561545" CREATED="1792822250018" MODIFIED="1792822250018"/>
+<node TEXT="中华文化远播" ID="ID_1560224583" CREATED="1792822250018" MODIFIED="1792822250018"/>
+</node>
+</node>
 </node>
 </map>
