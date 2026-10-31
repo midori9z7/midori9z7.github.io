@@ -1,24 +1,25 @@
-/* 诗目录索引页（posts/poems/*/index.html）样式：与首页/文章页一致的苹果风格 */
+/* 诗目录索引页（posts/poems/*/index.html）样式：排版沿用现在的，配色回原来的 */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
                "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
                "Segoe UI", sans-serif;
   background: #ffffff;
-  color: #1d1d1f;
+  color: #000000;
 }
-a { color: #00ff00; }
+a { color: #0000ee; }
+a:visited { color: #551a8b; }
 .post { max-width: 72em; }
 h1 { font-weight: 600; letter-spacing: -0.015em; }
 
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #000000;
-    color: #f5f5f7;
+    color: #ffffff;
   }
   a {
-    color: #00ff00;
+    color: #89a6ff;
   }
   a:visited {
-    color: #00ff00;
+    color: #f690ff;
   }
 }

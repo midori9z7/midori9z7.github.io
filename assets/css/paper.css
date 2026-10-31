@@ -1,15 +1,16 @@
 /* paper.css — 文章页排版（首页 index.html 仍用页内样式） */
 
 :root {
-  --ink: #1d1d1f;
-  --ink-soft: #6e6e73;
-  --rule: #d2d2d7;
+  /* 原版配色（只换颜色，排版/字重/间距等格式不动） */
+  --ink: #1b1b1b;
+  --ink-soft: #5c5c5c;
+  --rule: #d9d7d2;
   --paper: #ffffff;
-  --desk: #ffffff;
-  --accent: #00ff00;
-  --foot-link: #00ff00;
-  --mm-line: #8e8e93;
-  --tint: #f5f5f7;
+  --desk: #f2f1ee;
+  --accent: #7a1f1f;
+  --foot-link: #b3289f;
+  --mm-line: #9a9a96;
+  --tint: #f5f4f1;
   --shadow: none;
   /* 正文改用系统字体（与首页的苹果风格一致） */
   --serif: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
@@ -19,15 +20,15 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --ink: #f5f5f7;
-    --ink-soft: #86868b;
-    --rule: #424245;
+    --ink: #e6e4e0;
+    --ink-soft: #a5a19b;
+    --rule: #2e2e2c;
     --paper: #000000;
     --desk: #000000;
-    --accent: #00ff00;
-    --foot-link: #00ff00;
+    --accent: #e59a86;
+    --foot-link: #f690ff;
     --mm-line: #6f6f6b;
-    --tint: #1d1d1f;
+    --tint: #1a1a1a;
     --shadow: none;
   }
 }
