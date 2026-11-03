@@ -1,95 +1,226 @@
-<map version="1.0.1">
-<!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node TEXT="第7课 隋唐制度的变化与创新">
+<map version="freeplane 1.12.15">
+<!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
+<bookmarks/>
+<node TEXT="第7课 隋唐制度的变化与创新" FOLDED="false" ID="ID_1870517870" CREATED="1793534451251" MODIFIED="1793534451251">
 <font NAME="SansSerif" SIZE="12"/>
-  <node POSITION="right" TEXT="选官制度">
-    <node TEXT="演变线索">
-      <node TEXT="先秦 世官制">
-        <node TEXT="世卿世禄"/>
-      </node>
-      <node TEXT="秦 军功爵制"/>
-      <node TEXT="汉 察举制"/>
-      <node TEXT="魏晋 九品中正制">
-        <node TEXT="曹魏创立 维护士族特权"/>
-      </node>
-      <node TEXT="隋唐 科举制"/>
-    </node>
-    <node TEXT="科举制">
-      <node TEXT="创立">
-        <node TEXT="隋炀帝设进士科"/>
-      </node>
-      <node TEXT="发展">
-        <node TEXT="唐朝完善 分科考试 进士科为主"/>
-      </node>
-      <node TEXT="意义">
-        <node TEXT="选官公开 公平"/>
-        <node TEXT="扩大统治基础 阶层流动"/>
-        <node TEXT="提高官员文化素质"/>
-        <node TEXT="加强中央集权 影响深远"/>
-      </node>
-    </node>
-  </node>
-  <node POSITION="right" TEXT="三省六部制">
-    <node TEXT="形成">
-      <node TEXT="魏晋萌芽 隋文帝确立 唐朝完善"/>
-    </node>
-    <node TEXT="职责分工">
-      <node TEXT="中书省">
-        <node TEXT="草拟诏令 决策"/>
-      </node>
-      <node TEXT="门下省">
-        <node TEXT="审核诏令 审议"/>
-      </node>
-      <node TEXT="尚书省">
-        <node TEXT="执行政令 下设六部"/>
-        <node TEXT="吏 户 礼 兵 刑 工"/>
-      </node>
-    </node>
-    <node TEXT="政事堂">
-      <node TEXT="三省合议 宰相议事"/>
-    </node>
-    <node TEXT="意义">
-      <node TEXT="分散相权 加强皇权"/>
-      <node TEXT="分工明确 提高效率"/>
-      <node TEXT="决策行政体系日臻完备 影响后世"/>
-    </node>
-  </node>
-  <node POSITION="right" TEXT="赋税制度">
-    <node TEXT="租庸调制 唐初">
-      <node TEXT="基础">
-        <node TEXT="均田制"/>
-      </node>
-      <node TEXT="内容">
-        <node TEXT="租">
-          <node TEXT="谷物"/>
-        </node>
-        <node TEXT="庸">
-          <node TEXT="纳绢代役"/>
-        </node>
-        <node TEXT="调">
-          <node TEXT="绢布"/>
-        </node>
-      </node>
-      <node TEXT="作用">
-        <node TEXT="保证农时 保障税收"/>
-      </node>
-    </node>
-    <node TEXT="两税法 780年">
-      <node TEXT="背景">
-        <node TEXT="均田制破坏 租庸调制瓦解"/>
-      </node>
-      <node TEXT="实行">
-        <node TEXT="杨炎主持"/>
-      </node>
-      <node TEXT="内容">
-        <node TEXT="按资产纳户税 按田亩纳地税"/>
-        <node TEXT="夏秋两次征税"/>
-      </node>
-      <node TEXT="意义">
-        <node TEXT="征税标准由人丁转为财产"/>
-        <node TEXT="人身控制放松 影响后世"/>
-      </node>
-    </node>
-  </node>
+<hook NAME="MapStyle">
+    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" auto_compact_layout="true" fit_to_viewport="false" show_icons="BESIDE_NODES" show_icon_for_attributes="true" show_tags="UNDER_NODES" showTagCategories="false" show_note_icons="true"/>
+    <tags category_separator="::"/>
+
+<map_styles>
+<stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
+<font SIZE="24"/>
+<stylenode LOCALIZED_TEXT="styles.predefined" POSITION="bottom_or_right" STYLE="bubble">
+<stylenode LOCALIZED_TEXT="default" ID="ID_271890427" ICON_SIZE="12 pt" COLOR="#000000" STYLE="fork">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" DASH="" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_271890427" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<font NAME="SansSerif" SIZE="10" BOLD="false" ITALIC="false"/>
+<richcontent TYPE="DETAILS" CONTENT-TYPE="plain/auto"/>
+<richcontent TYPE="NOTE" CONTENT-TYPE="plain/auto"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="defaultstyle.details"/>
+<stylenode LOCALIZED_TEXT="defaultstyle.tags">
+<font SIZE="10"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="defaultstyle.attributes">
+<font SIZE="9"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="defaultstyle.note" COLOR="#000000" BACKGROUND_COLOR="#ffffff" TEXT_ALIGN="LEFT"/>
+<stylenode LOCALIZED_TEXT="defaultstyle.floating">
+<edge STYLE="hide_edge"/>
+<cloud COLOR="#f0f0f0" SHAPE="ROUND_RECT"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="defaultstyle.selection" BACKGROUND_COLOR="#afd3f7" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#afd3f7"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.user-defined" POSITION="bottom_or_right" STYLE="bubble">
+<stylenode LOCALIZED_TEXT="styles.topic" COLOR="#18898b" STYLE="fork">
+<font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.subtopic" COLOR="#cc3300" STYLE="fork">
+<font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.subsubtopic" COLOR="#669900">
+<font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.important" ID="ID_67550811">
+<icon BUILTIN="yes"/>
+<arrowlink COLOR="#003399" TRANSPARENCY="255" DESTINATION="ID_67550811"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.flower" COLOR="#ffffff" BACKGROUND_COLOR="#255aba" STYLE="oval" TEXT_ALIGN="CENTER" BORDER_WIDTH_LIKE_EDGE="false" BORDER_WIDTH="22 pt" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#f9d71c" BORDER_DASH_LIKE_EDGE="false" BORDER_DASH="CLOSE_DOTS" MAX_WIDTH="6 cm" MIN_WIDTH="3 cm"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="bottom_or_right" STYLE="bubble">
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level.root" COLOR="#000000" STYLE="oval" SHAPE_HORIZONTAL_MARGIN="10 pt" SHAPE_VERTICAL_MARGIN="10 pt">
+<font SIZE="18"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,1" COLOR="#0033ff">
+<font SIZE="16"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,2" COLOR="#00b439">
+<font SIZE="14"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,3" COLOR="#990000">
+<font SIZE="12"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,4" COLOR="#111111">
+<font SIZE="10"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,5"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,6"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,7"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,8"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,9"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,10"/>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,11"/>
+</stylenode>
+</stylenode>
+</map_styles>
+</hook>
+<node TEXT="选官制度" POSITION="bottom_or_right" ID="ID_1846264615" CREATED="1793534451251" MODIFIED="1793534451251">
+<node TEXT="演变线索" ID="ID_1529643002" CREATED="1793534451251" MODIFIED="1793534883559">
+<node TEXT="夏商周 世袭制（世卿世禄）" ID="ID_823634917" CREATED="1793534451251" MODIFIED="1793534904916"/>
+<node TEXT="秦 军功爵制" ID="ID_1078720937" CREATED="1793534451251" MODIFIED="1793534451251"/>
+<node TEXT="汉 察举制" ID="ID_586229468" CREATED="1793534451251" MODIFIED="1793534451251"/>
+<node TEXT="魏晋 九品中正制" ID="ID_871795340" CREATED="1793534451251" MODIFIED="1793534451251"/>
+<node TEXT="隋唐 科举制" ID="ID_1290718616" CREATED="1793534451251" MODIFIED="1793534451251"/>
+</node>
+<node TEXT="九品中正制" ID="ID_138054439" CREATED="1793534954634" MODIFIED="1793534970955">
+<node TEXT="承汉评议 权收中央" ID="ID_773312046" CREATED="1793534971505" MODIFIED="1793535002906"/>
+<node TEXT="初期 家世 道德 才能 &gt; 西晋 家世" ID="ID_1281316777" CREATED="1793535011425" MODIFIED="1793535059065">
+<node TEXT="维护士族特权 门阀政治" ID="ID_704506851" CREATED="1793535059855" MODIFIED="1793536754915"/>
+<node TEXT="上品无寒门 下品无世族" ID="ID_1818511190" CREATED="1793535076614" MODIFIED="1793535083598"/>
+</node>
+</node>
+<node TEXT="科举制" ID="ID_1222707122" CREATED="1793534451251" MODIFIED="1793534451251">
+<node TEXT="形成" ID="ID_1279070567" CREATED="1793534451251" MODIFIED="1793535133848">
+<node TEXT="隋炀帝设进士科" ID="ID_805896006" CREATED="1793534451251" MODIFIED="1793534451251"/>
+</node>
+<node TEXT="发展" ID="ID_559650271" CREATED="1793534451251" MODIFIED="1793535780514">
+<node TEXT="唐 继承并完善" ID="ID_697519997" CREATED="1793534451251" MODIFIED="1793535647862">
+<node TEXT="太宗增加科目" ID="ID_599156399" CREATED="1793535172097" MODIFIED="1793535188455">
+<node TEXT="明经（易）帖经、经义" ID="ID_1928753690" CREATED="1793535205261" MODIFIED="1793535233096"/>
+<node TEXT="进士（难）策论" ID="ID_131840448" CREATED="1793535233647" MODIFIED="1793535248058"/>
+</node>
+<node TEXT="武曌扩招 武举殿试" ID="ID_816540036" CREATED="1793535256565" MODIFIED="1793535401323"/>
+<node TEXT="玄宗任用高官主持考试" ID="ID_492247325" CREATED="1793535401616" MODIFIED="1793535424314"/>
+<node TEXT="行卷" ID="ID_1299932760" CREATED="1793535424943" MODIFIED="1793535431994"/>
+</node>
+<node TEXT="宋 糊名制" ID="ID_720630121" CREATED="1793535603886" MODIFIED="1793535616990"/>
+<node TEXT="明 八股取士" ID="ID_1832286977" CREATED="1793535617860" MODIFIED="1793535625152"/>
+<node TEXT="戊戌 设经济特科" ID="ID_1186591822" CREATED="1793535625330" MODIFIED="1793535636121"/>
+<node TEXT="1905 废除" ID="ID_811863342" CREATED="1793535636301" MODIFIED="1793535643481"/>
+</node>
+<node TEXT="意义" ID="ID_534883280" CREATED="1793534451251" MODIFIED="1793534451251">
+<node TEXT="选官公开 公平" ID="ID_507838654" CREATED="1793534451251" MODIFIED="1793534451251"/>
+<node TEXT="扩大统治基础 促进阶层流动" ID="ID_181270433" CREATED="1793534451251" MODIFIED="1793535451452"/>
+<node TEXT="提高官员文化素质" ID="ID_818285182" CREATED="1793534451251" MODIFIED="1793534451251"/>
+<node TEXT="加强中央集权" ID="ID_1875376854" CREATED="1793534451251" MODIFIED="1793535460460"/>
+<node TEXT="西方借鉴形成文官制" ID="ID_1859720184" CREATED="1793535472641" MODIFIED="1793535486061"/>
+<node TEXT="公平竞争 勤奋好学的思想" ID="ID_570344358" CREATED="1793535486241" MODIFIED="1793535500061">
+<node TEXT="“郊寒岛瘦”（“苦吟”、《登科后》）" ID="ID_106067009" CREATED="1793535500444" MODIFIED="1793535579727"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="三省六部制" POSITION="bottom_or_right" ID="ID_1329704294" CREATED="1793534451251" MODIFIED="1793534451251">
+<node TEXT="演变线索" ID="ID_416966840" CREATED="1793535681864" MODIFIED="1793535691356">
+<node TEXT="秦 三公九卿制" ID="ID_1925140394" CREATED="1793535691944" MODIFIED="1793535700781"/>
+<node TEXT="汉 中外朝制" ID="ID_146868704" CREATED="1793535701044" MODIFIED="1793535715175"/>
+<node TEXT="魏晋南北朝 三省" ID="ID_1886870533" CREATED="1793535715384" MODIFIED="1793535729924"/>
+<node TEXT="隋文帝 三省六部制" ID="ID_434704509" CREATED="1793535730290" MODIFIED="1793535739314"/>
+</node>
+<node TEXT="职责分工" ID="ID_1807787133" CREATED="1793534451251" MODIFIED="1793534451251">
+<node TEXT="" ID="ID_778515555" CREATED="1793535824849" MODIFIED="1793535824849">
+<hook NAME="FirstGroupNode"/>
+</node>
+<node TEXT="中书省" ID="ID_1987047320" CREATED="1793534451251" MODIFIED="1793534451251">
+<node TEXT="草拟诏令" ID="ID_1169189092" CREATED="1793534451251" MODIFIED="1793535809704"/>
+</node>
+<node TEXT="门下省" ID="ID_228217615" CREATED="1793534451251" MODIFIED="1793534451251">
+<node TEXT="审核诏令 不妥驳回" ID="ID_861193272" CREATED="1793534451251" MODIFIED="1793535802194"/>
+</node>
+<node TEXT="" ID="ID_354497457" CREATED="1793535824849" MODIFIED="1793535824849">
+<hook NAME="SummaryNode"/>
+<hook NAME="AlwaysUnfoldedNode"/>
+<node TEXT="决策" ID="ID_833083410" CREATED="1793535824854" MODIFIED="1793535832709"/>
+<node TEXT="削弱尚书省权力" ID="ID_1248582036" CREATED="1793535833048" MODIFIED="1793535862984"/>
+</node>
+<node TEXT="尚书省" ID="ID_1198195255" CREATED="1793534451251" MODIFIED="1793534451251">
+<node TEXT="执行" ID="ID_1021201970" CREATED="1793534451251" MODIFIED="1793535884012"/>
+<node TEXT="六部" ID="ID_127308212" CREATED="1793534451251" MODIFIED="1793535872519">
+<node TEXT="吏" ID="ID_47517140" CREATED="1793535888044" MODIFIED="1793535909898">
+<node TEXT="官员铨选" ID="ID_1557157300" CREATED="1793535910474" MODIFIED="1793535916400"/>
+</node>
+<node TEXT="户" ID="ID_450068829" CREATED="1793535917571" MODIFIED="1793535930366">
+<node TEXT="财政、赋税、户籍" ID="ID_1678284817" CREATED="1793535930561" MODIFIED="1793535945962"/>
+</node>
+<node TEXT="礼" ID="ID_1816971286" CREATED="1793535917600" MODIFIED="1793535954111">
+<node TEXT="科举、外交、五礼仪制" ID="ID_332950004" CREATED="1793535965782" MODIFIED="1793536006940"/>
+</node>
+<node TEXT="兵" ID="ID_1026305514" CREATED="1793535954447" MODIFIED="1793535958361">
+<node TEXT="军事" ID="ID_1145227961" CREATED="1793536008047" MODIFIED="1793536011000"/>
+</node>
+<node TEXT="刑" ID="ID_1220064820" CREATED="1793535958530" MODIFIED="1793535960710">
+<node TEXT="刑狱" ID="ID_408849765" CREATED="1793536017781" MODIFIED="1793536024200"/>
+</node>
+<node TEXT="工" ID="ID_1970330445" CREATED="1793535960893" MODIFIED="1793535964352">
+<node TEXT="工程" ID="ID_628020737" CREATED="1793536025260" MODIFIED="1793536028320"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="政事堂" ID="ID_24478793" CREATED="1793534451251" MODIFIED="1793534451251">
+<node TEXT="三省合议 宰相议事" ID="ID_1775896667" CREATED="1793534451251" MODIFIED="1793534451251"/>
+</node>
+<node TEXT="意义" ID="ID_1745771621" CREATED="1793534451251" MODIFIED="1793534451251">
+<node TEXT="分散相权 加强皇权" ID="ID_1500378524" CREATED="1793534451251" MODIFIED="1793534451251"/>
+<node TEXT="分工明确 提高效率" ID="ID_994099279" CREATED="1793534451251" MODIFIED="1793534451251"/>
+<node TEXT="决策行政体系日臻完备 影响巨大" ID="ID_295034113" CREATED="1793534451251" MODIFIED="1793536147842"/>
+</node>
+</node>
+<node TEXT="赋税制度" POSITION="bottom_or_right" ID="ID_1174954787" CREATED="1793534451251" MODIFIED="1793534451251">
+<node TEXT="演变线索" ID="ID_1864025988" CREATED="1793536208701" MODIFIED="1793536226730">
+<node TEXT="魏晋 租调制" ID="ID_1824390596" CREATED="1793536227035" MODIFIED="1793536234976"/>
+<node TEXT="北魏孝文帝 均田令" ID="ID_1603980805" CREATED="1793536235668" MODIFIED="1793536248174"/>
+<node TEXT="唐初 租庸调制" ID="ID_1202423554" CREATED="1793536248885" MODIFIED="1793536264208"/>
+</node>
+<node TEXT="租庸调制" ID="ID_808547491" CREATED="1793534451251" MODIFIED="1793536267978">
+<node TEXT="基础" ID="ID_583783531" CREATED="1793534451251" MODIFIED="1793534451251">
+<node TEXT="均田制" ID="ID_637798584" CREATED="1793534451251" MODIFIED="1793534451251"/>
+</node>
+<node TEXT="内容" ID="ID_1727768931" CREATED="1793534451251" MODIFIED="1793534451251">
+<node TEXT="租" ID="ID_1235678349" CREATED="1793534451251" MODIFIED="1793534451251">
+<node TEXT="纳粟" ID="ID_621435272" CREATED="1793534451251" MODIFIED="1793536418590"/>
+</node>
+<node TEXT="庸" ID="ID_1824761376" CREATED="1793534451251" MODIFIED="1793534451251">
+<node TEXT="纳绢布代役" ID="ID_1565522062" CREATED="1793534451251" MODIFIED="1793536394270"/>
+</node>
+<node TEXT="调" ID="ID_292041730" CREATED="1793534451251" MODIFIED="1793534451251">
+<node TEXT="纳绢布" ID="ID_989923730" CREATED="1793534451251" MODIFIED="1793536423368"/>
+</node>
+</node>
+<node TEXT="作用" ID="ID_1518824874" CREATED="1793534451251" MODIFIED="1793534451251">
+<node TEXT="保证农时 保障税收" ID="ID_907710644" CREATED="1793534451251" MODIFIED="1793534451251"/>
+</node>
+</node>
+<node TEXT="两税法 780年" ID="ID_1339209490" CREATED="1793534451251" MODIFIED="1793534451251">
+<node TEXT="背景" ID="ID_670056237" CREATED="1793534451251" MODIFIED="1793534451251">
+<node TEXT="均田制破坏 租庸调制瓦解" ID="ID_683220083" CREATED="1793534451251" MODIFIED="1793534451251"/>
+<node TEXT="天宝年间的土地买卖兼并" ID="ID_1182879276" CREATED="1793536449770" MODIFIED="1793536483688"/>
+</node>
+<node TEXT="实行" ID="ID_1188594717" CREATED="1793534451251" MODIFIED="1793534451251">
+<node TEXT="杨炎" ID="ID_128056396" CREATED="1793534451251" MODIFIED="1793536491198"/>
+</node>
+<node TEXT="内容" ID="ID_612718239" CREATED="1793534451251" MODIFIED="1793534451251">
+<node TEXT="按资产纳户税 按田亩纳地税" ID="ID_744942510" CREATED="1793534451251" MODIFIED="1793534451251"/>
+<node TEXT="夏秋两次征税" ID="ID_480388846" CREATED="1793534451251" MODIFIED="1793534451251"/>
+<node TEXT="取消租庸调制 杂税 杂役" ID="ID_1292576512" CREATED="1793536502504" MODIFIED="1793536512428"/>
+</node>
+<node TEXT="意义" ID="ID_1953710700" CREATED="1793534451251" MODIFIED="1793534451251">
+<node TEXT="资产过渡 征税标准由人丁转为财产" ID="ID_1325727067" CREATED="1793534451251" MODIFIED="1793536579669"/>
+<node TEXT="征收时间 不走时&gt;&gt;走时" ID="ID_1286044295" CREATED="1793536584215" MODIFIED="1793536613225"/>
+<node TEXT="人身控制放松 以庸代役&gt;&gt;不服役" ID="ID_106213253" CREATED="1793534451251" MODIFIED="1793536652235"/>
+<node TEXT="地主转嫁赋税 变相加重农民负担" ID="ID_1541387436" CREATED="1793536658988" MODIFIED="1793536697335"/>
+</node>
+</node>
+</node>
 </node>
 </map>
