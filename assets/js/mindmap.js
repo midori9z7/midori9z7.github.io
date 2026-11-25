@@ -253,6 +253,19 @@
     return (type === 'NODE') ? only : null;
   }
 
+  // Freeplane 的汇总节点：<hook NAME="SummaryNode"/>（旧格式是 SUMMARY="true"）
+  function hasHook(el, name) {
+    for (var i = 0; i < el.children.length; i++) {
+      var c = el.children[i];
+      if (c.tagName === 'hook' && c.getAttribute('NAME') === name) return true;
+    }
+    return false;
+  }
+
+  function isSummary(el) {
+    return el.getAttribute('SUMMARY') === 'true' || hasHook(el, 'SummaryNode');
+  }
+
   // 地图样式里给标签配的颜色：<tags tagcolor1="名字#rrggbbaa"/>
   function tagPalette(map) {
     var out = {};
@@ -270,7 +283,7 @@
     return out;
   }
 
-  function build(el, ctx) {
+  function build(el, ctx, sumNames) {
     // children 必须是数组，叶子也不能省
     var node = { content: '', children: [] };
     var payload = null;
@@ -355,6 +368,12 @@
     }
     if (attrs.length) html += '<br><span class="mm-attrs">' + attrs.join('') + '</span>';
 
+    // 汇总节点：给前面几个兄弟做括注，这里用一个右花括号示意
+    if (!ctx.plain && isSummary(el)) {
+      var label = (sumNames && sumNames.length) ? '汇总：' + sumNames.join('、') : '汇总节点';
+      html = '<span class="mm-sum" title="' + escapeAttr(label) + '">}</span>' + html;
+    }
+
     node.content = html;
 
     var edge = ctx.plain ? null : direct(el, 'edge');
@@ -366,9 +385,29 @@
     }
     if (payload) node.payload = payload;
 
+    // 汇总节点括住的兄弟：从 FirstGroupNode（若有）到它前一个
+    var groupStart = 0;
     for (var k = 0; k < el.children.length; k++) {
       var child = el.children[k];
-      if (child.tagName === 'node') node.children.push(build(child, ctx));
+      if (child.tagName !== 'node') continue;
+
+      var names = null;
+      if (isSummary(child)) {
+        names = [];
+        for (var g = groupStart; g < k; g++) {
+          var sib = el.children[g];
+          if (sib.tagName !== 'node' || isSummary(sib)) continue;
+          var t = sib.getAttribute('TEXT');
+          if (!t) {
+            var sibRich = directRich(sib, 'NODE');
+            if (sibRich) t = textOf(inlineHTML(sibRich));
+          }
+          if (t) names.push(t.length > 12 ? t.slice(0, 12) + '…' : t);
+        }
+      }
+      if (hasHook(child, 'FirstGroupNode')) groupStart = k;
+
+      node.children.push(build(child, ctx, names));
     }
     return node;
   }

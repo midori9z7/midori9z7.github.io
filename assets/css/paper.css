@@ -274,6 +274,15 @@ hr {
 
 .mindmap .mm-icon + .mm-icon { margin-left: .12em; }
 
+/* 汇总节点前的花括号 */
+.mindmap .mm-sum {
+  margin-right: .2em;
+  color: var(--ink-soft);
+  font-size: 1.2em;
+  line-height: 1;
+  vertical-align: -.06em;
+}
+
 .mindmap .mm-tag {
   display: inline-block;
   margin-left: .3em;

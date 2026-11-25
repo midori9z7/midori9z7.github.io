@@ -107,8 +107,11 @@ mm.setData(tree).then(function () { mm.fit(); });</code></pre>
 <tr><td><code>LINK="…"</code></td><td>整块文字变成链接，新标签页打开</td></tr>
 <tr><td><code>COLOR</code>、<code>BACKGROUND_COLOR</code>、<code>&lt;font&gt;</code></td><td>文字颜色、底色、相对字号（12 号 = 1em）</td></tr>
 <tr><td><code>&lt;edge COLOR="…"/&gt;</code></td><td>这一支连线的颜色</td></tr>
+<tr><td><code>&lt;hook NAME="SummaryNode"/&gt;</code></td><td>节点前加一个右花括号，悬停可见它括住哪几个兄弟</td></tr>
 </tbody>
 </table>
+
+<p>汇总节点在 Freeplane 里用花括号括住一组兄弟，页面上没有这层空间，就用「}」示意——它是普通的子节点，只是多了那个 hook。</p>
 
 <p>富文本经白名单重建：段落、列表、表格压成行，行内只留 <code>b</code>、<code>i</code>、<code>u</code>、<code>s</code>、<code>code</code>、<code>a</code>、<code>br</code>、<code>img</code>，<code>on*</code> 事件与 <code>javascript:</code>、<code>file:</code> 链接丢掉。深色模式下过暗的字色自动提亮，有底色的节点按底色挑黑字或白字；换主题时重新解析整棵树。</p>
 
