@@ -8,7 +8,7 @@ My personal blog.
 index.html                  首页：aboutme 版式 + 文章 / 诗歌 / 链接的完整清单
 assets/css/style.css        首页样式
 assets/css/paper.css        文章页样式（文章与诗都用它）
-assets/js/mindmap.js        把 FreeMind 的 .mm 渲染成导图
+assets/js/mindmap.js        把 FreeMind / Freeplane 的 .mm 渲染成导图（富文本、备注、图标、标签、属性）
 assets/js/side-toc.js       从页面结构生成侧边目录（历史笔记页用）
 assets/img/                 头像等图片
 assets/vendor/              自托管依赖：d3、markmap-view

@@ -80,6 +80,17 @@ h1.title {
   text-indent: 0;
 }
 
+/* 版权 / 生成方式说明 */
+
+.ai-note {
+  margin: 0 0 2.2rem;
+  padding: .4rem .8rem;
+  border-left: 2px solid var(--rule);
+  color: var(--ink-soft);
+  font-size: .78rem;
+  text-indent: 0;
+}
+
 /* 正文 */
 
 p {
@@ -243,6 +254,99 @@ hr {
   text-align: center;
   text-indent: 0;
 }
+
+/* 节点里的链接：淡一点的下划线，不然和正文分不出来 */
+.mindmap .markmap-foreign a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: currentColor;
+  text-underline-offset: 2px;
+}
+
+/* Freeplane 富文本：图标、标签、备注标记、属性行 */
+
+.mindmap .mm-icons { margin-right: .18em; }
+
+.mindmap .mm-icon {
+  font-style: normal;
+  font-variant-emoji: emoji;
+}
+
+.mindmap .mm-icon + .mm-icon { margin-left: .12em; }
+
+.mindmap .mm-tag {
+  display: inline-block;
+  margin-left: .3em;
+  padding: 0 .3em;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  color: var(--ink-soft);
+  font-size: .7em;
+  line-height: 1.5;
+  vertical-align: .1em;
+  white-space: nowrap;
+}
+
+.mindmap .mm-mark {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-left: .3em;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  font: italic 600 10px/12px Georgia, serif;
+  text-align: center;
+  vertical-align: .12em;
+  opacity: .5;
+  cursor: help;
+}
+
+.mindmap .mm-mark:hover,
+.mindmap .mm-mark:focus { opacity: 1; outline: none; }
+
+.mindmap .mm-attrs {
+  color: var(--ink-soft);
+  font-size: .78em;
+}
+
+.mindmap .mm-attr + .mm-attr::before { content: " · "; }
+
+.mindmap .mm-attr-k { opacity: .75; }
+
+/* 备注气泡：挂在 body 上，不受 SVG 的裁剪影响 */
+
+.mm-tip {
+  position: fixed;
+  z-index: 60;
+  display: none;
+  max-width: 20rem;
+  max-height: 16rem;
+  padding: .55rem .75rem;
+  overflow: auto;
+  background-color: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--rule);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .16);
+  font-size: .78rem;
+  line-height: 1.65;
+  text-align: left;
+  text-indent: 0;
+}
+
+.mm-tip.is-open { display: block; }
+
+.mm-tip .mm-tip-h {
+  margin: 0 0 .25rem;
+  color: var(--ink-soft);
+  font-size: .7rem;
+  letter-spacing: .08em;
+}
+
+.mm-tip .mm-tip-b { margin: 0 0 .55rem; }
+
+.mm-tip .mm-tip-b:last-child { margin-bottom: 0; }
+
+.mm-tip img { max-width: 100%; height: auto; }
 
 /* 单元目录与可折叠正文 */
 
@@ -480,7 +584,8 @@ sup a { text-decoration: none; }
 
   .side-toc,
   .toc-fab,
-  .toc-backdrop { display: none; }
+  .toc-backdrop,
+  .mm-tip { display: none; }
 }
 
 /* 窄屏 */
